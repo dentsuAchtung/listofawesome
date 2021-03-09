@@ -1,0 +1,31 @@
+<pgcard TimeOut="3000" ProgressType="bar" AdditionalClasses="widget-8 card no-border {{_bgColor}} no-margin widget-loader-bar" Maximize="false" Toggle="false"
+ Close="false" BodyClass="no-padding">
+	<ng-template #CardTitle>
+		<span class="font-montserrat fs-11 all-caps">
+			Weekly Sales
+			<i class="fa fa-chevron-right"></i>
+		</span>
+	</ng-template>
+	<div class="container-xs-height full-height">
+		<div class="row-xs-height ">
+			<div class="col-xs-height col-top" #chartContainer>
+				<div class="row full-height">
+					<div class="col-sm-6">
+						<div class="p-l-20 p-l-20 full-height d-flex flex-column justify-content-between">
+							<h3 class="no-margin p-b-5">$14,000</h3>
+
+							<p class="small m-t-5 m-b-20">
+								<span class="label label-white hint-text font-montserrat m-r-5">60%</span><span class="fs-12">Higher</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-6">
+					</div>
+				</div>
+				<div class="widget-8-chart line-chart" data-line-color="white" data-points="true" [attr.data-point-color]="_pointColor" data-stroke-width="2">
+					<nvd3 [options]="chartOptions" [data]="chartData"></nvd3>
+				</div>
+			</div>
+		</div>
+	</div>
+</pgcard>

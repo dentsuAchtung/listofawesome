@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset="utf-8" />
+	<title>List of Awesome</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+	<link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico" />
+	<link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta content="" name="description" />
+	<meta content="Luke Vink" name="author" />
+
+	<link href="../assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/plugins/font-awesome-5/css/all.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+	<link type="text/css" rel="stylesheet" href="../assets/plugins/jquery-datatable/media/css/jquery.dataTables.css">
+	<link type="text/css" rel="stylesheet" href="../assets/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css">
+	<link media="screen" type="text/css" rel="stylesheet" href="../assets/plugins/datatables-responsive/css/datatables.responsive.css">
+	<link type="text/css" rel="stylesheet" href="../assets/plugins/bootstrap-tag/bootstrap-tagsinput.css">
+	<link rel="stylesheet" href="../assets/plugins/swiper6.4.15/swiper-bundle.min.css" />
+
+
+	<link class="main-stylesheet" href="../pages/css/themes/achtung.css" rel="stylesheet" type="text/css" />
+	<link class="main-stylesheet" href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- update the version number as needed -->
+		<script defer="" src="/__/firebase/8.2.9/firebase-app.js"></script>
+		<script defer="" src="/__/firebase/8.2.9/firebase-auth.js"></script>
+		<script defer="" src="/__/firebase/8.2.9/firebase-firestore.js"></script>
+		<!--
+			initialize the SDK after all desired features are loaded, set useEmulator to false
+			to avoid connecting the SDK to running emulators.
+		-->
+		<script defer="" src="/__/firebase/init.js?useEmulator=true"></script>
+    <!--
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer="" src="/__/firebase/init.js?useEmulator=true"></script>
+
+
+</head>
+
+<body class="fixed-header menu-pin menu-behind">
+	<!-- BEGIN SIDEBAR -->
+	    <!-- BEGIN SIDEBPANEL-->
+    <nav class="page-sidebar" data-pages="sidebar">
+      <!-- BEGIN SIDEBAR MENU TOP TRAY CONTENT-->
+      <div class="sidebar-overlay-slide from-top" id="appMenu">
+      </div>
+      <!-- END SIDEBAR MENU TOP TRAY CONTENT-->
+      <!-- BEGIN SIDEBAR MENU HEADER-->
+      <div class="sidebar-header">
+      </div>
+      <!-- END SIDEBAR MENU HEADER-->
+      <!-- START SIDEBAR MENU -->
+      <div class="sidebar-menu">
+        <!-- BEGIN SIDEBAR MENU ITEMS-->
+        <ul class="menu-items">
+	        <li class="m-t-30" >
+            <a href="../">
+              <span class="title">All People</span>
+              <span class=" arrow"></span>
+            </a>
+            <span class="icon-thumbnail"><i class="pg-icon">users</i></span>
+            <ul class="sub-menu">
+              <li class="active">
+                <a href="#">List</a>
+                <span class="icon-thumbnail"><i class="pg-icon">list_bullets</i></span>
+              </li>
+              <li class="">
+                <a href="#">Grid</a>
+                <span class="icon-thumbnail"><i class="pg-icon">grid</i></span>
+              </li>
+          	</ul>
+          </li>
+					<li class="">
+            <a href="../review">
+              <span class="title">Needs Review</span>
+            </a>
+            <span class="icon-thumbnail "><i id="menu-review-icon" class="pg-icon">star</i></span>
+          </li>
+          <li class="">
+            <a href="../add">
+              <span class="title">Add Person</span>
+            </a>
+            <span class="icon-thumbnail "><i class="pg-icon">user_add</i></span>
+          </li>
+					<li class="">
+						<a href="../lists">
+							<span class="title">My Lists</span>
+						</a>
+						<span class="icon-thumbnail "><i class="pg-icon">pin</i></span>
+					</li>
+					<li class="active">
+            <a href="../settings">
+              <span class="title">Settings</span>
+            </a>
+            <span class="icon-thumbnail "><i class="pg-icon">cog</i></span>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <!-- END SIDEBAR MENU -->
+    </nav>
+    <!-- END SIDEBAR -->
+	<!-- END SIDEBAR -->
+	<!-- START PAGE-CONTAINER -->
+	<div class="page-container">
+		<!-- START PAGE HEADER WRAPPER -->
+		<!-- START HEADER -->
+		<div class="header ">
+			<!-- START MOBILE SIDEBAR TOGGLE -->
+				<a href="#" class="btn-link toggle-sidebar d-lg-none pg-icon btn-icon-link" data-toggle="sidebar">menu</a>
+			<!-- END MOBILE SIDEBAR TOGGLE -->
+			<div class="">
+				<div class="brand inline  m-l-10 ">
+					<img src="../assets/img/logo.png" alt="logo" data-src="../assets/img/logo.png" data-src-retina="../assets/img/logo.png" height="45">
+				</div>
+
+<!-- 				<a href="#" class="search-link d-lg-inline-block d-none" style="margin-left:50px;" data-toggle="search"><i class="pg-icon">search</i>Type anywhere to <span class="bold">search</span></a> -->
+			</div>
+			<div class="d-flex align-items-center">
+
+				<!-- START User Info-->
+				<div class="dropdown pull-right d-lg-block">
+					<button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false" aria-label="profile dropdown">
+						<span class="thumbnail-wrapper d32 circular inline">
+							<img id="account-photo" src="assets/img/profiles/0.png"  width="32" height="32">
+						</span>
+					</button>
+					<div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
+						<a href="#" class="dropdown-item"><span>Signed in as <br /><b><span id="account-name">Achtung!<span></b></span></a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item">Settings</a>
+						<a id="sign-out" class="dropdown-item">Sign Out</a>
+					</div>
+				</div>
+				<!-- END User Info-->
+
+			</div>
+		</div>
+		<!-- END HEADER -->
+		<!-- END PAGE HEADER WRAPPER -->
+		<!-- START PAGE CONTENT WRAPPER -->
+		<div class="page-content-wrapper">
+			<!-- START PAGE CONTENT -->
+			<div class="content">
+
+				<!-- START CONTAINER FLUID -->
+				<div class="container-fluid container-fixed-lg">
+					<!-- BEGIN PlACE PAGE CONTENT HERE -->
+
+
+					<div class="d-flex" style="margin-top:24px;">
+						<div class="col-xl-12 col-lg-12">
+							<h4 >Settings</h4>
+						</div>
+					</div>
+
+					<!-- BEGIN USERS  -->
+					<div class="d-flex">
+						<div class="col-xl-12 col-lg-12">
+
+
+							<div class="card card-default">
+								<div class="card-header">
+									<div class="card-title">
+										Account
+									</div>
+								</div>
+
+
+								<div class="card-block" style="padding:0 20px 20px 20px;">
+									<div class="d-flex">
+										<div class="col-xl-6 col-lg-6">
+													<h4 id="account-displayname"></h4>
+													<p id="account-email"></p>
+													<p id="account-isadmin"></p>
+
+										</div>
+
+
+										<div class="col-xl-6 col-lg-6" style="display:flex; justify-content: flex-end; text-align:right;">
+											<div id="account-profileImage" class="avatar" style=""></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+								<!-- BEGIN CARD -->
+								<div class="card card-default">
+
+
+									<div class="card-header">
+										<div class="card-title">
+											Skills
+										</div>
+									</div>
+
+									<div class="card-block" style="padding:0 20px 20px 20px;">
+
+										<div class="d-flex category-row">
+											<div class="col-3 no-padding">
+												<h6>Category Title</h6>
+											</div>
+											<div class="col-8 no-padding">
+												<h6>Skill Tags</h6>
+											</div>
+											<div class="col-1 no-padding" style="text-align: center;">
+												<button  aria-label="Add Row" data-uid="'+ doc.id + '" type="button" class="btn btn-achtung btn-animated from-top" style="width: 75%;"> <span> <i class="pg-icon">add</i> </span> <span class="hidden-block"> <i class="pg-icon">add</i> </span> </button>
+											</div>
+										</div>
+										<form role="form">
+											<div id="skills-editor">
+
+											</div>
+										</form>
+									</div>
+								</div>
+								<!-- END CARD -->
+
+								<div class="card card-default">
+									<div class="card-header">
+										<div class="card-title">
+											LOA Users
+										</div>
+									</div>
+
+
+									<div class="card-block" style="padding:0 20px 20px 20px;">
+										<div class="search-wrapper">
+											<input class="form-control pull-right" id="search-table-full" placeholder="Search" type="text">
+										</div>
+										<!-- BEGIN TABLE -->
+
+
+										<div class="hideMe" id="contactTableWrapper">
+											<table cellspacing="0" class="table table-hover" id="usersTable" width="100%">
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Email</th>
+														<th class="no-sort">Role</th>
+														<th class="no-sort">
+														</th>
+													</tr>
+												</thead>
+												<tbody></tbody>
+											</table>
+										</div>
+										<!-- END TABLE -->
+									</div>
+
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+
+
+
+					<!-- END CONTAINER FLUID -->
+				</div>
+				<!-- END PAGE CONTENT -->
+
+		</div>
+		<!-- END PAGE CONTENT WRAPPER -->
+	</div>
+	<!-- END PAGE CONTAINER -->
+
+
+
+
+	<!-- BEGIN VENDOR JS -->
+	    <!-- BEGIN VENDOR JS -->
+		<script type="text/javascript" src="../assets/plugins/classie/classie.js" ></script>
+    <script type="text/javascript" src="../assets/plugins/pace/pace.min.js" ></script>
+    <script type="text/javascript" src="../assets/plugins/jquery/jquery-3.2.1.min.js" ></script>
+    <script type="text/javascript" src="../assets/plugins/modernizr.custom.js" ></script>
+    <script type="text/javascript" src="../assets/plugins/jquery-ui/jquery-ui.min.js" ></script>
+    <script type="text/javascript" src="../assets/plugins/popper/umd/popper.min.js" ></script>
+    <script type="text/javascript" src="../assets/plugins/bootstrap/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="../assets/plugins/jquery/jquery-easy.js" ></script>
+    <script type="text/javascript" src="../assets/plugins/jquery-unveil/jquery.unveil.min.js" ></script>
+    <script type="text/javascript" src="../assets/plugins/jquery-ios-list/jquery.ioslist.min.js" ></script>
+    <script type="text/javascript" src="../assets/plugins/jquery-actual/jquery.actual.min.js"></script>
+    <script type="text/javascript" src="../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script type="text/javascript" src="../assets/plugins/jquery-datatable/media/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="../assets/plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+		<script type="text/javascript" src="../assets/plugins/jquery-datatable/extensions/Bootstrap/jquery-datatable-bootstrap.js"></script>
+		<script type="text/javascript" src="../assets/plugins/datatables-responsive/js/datatables.responsive.js" ></script>
+		<script type="text/javascript" src="../assets/plugins/datatables-responsive/js/lodash.min.js" ></script>
+		<script type="text/javascript" src="../assets/plugins/swiper6.4.15/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="../assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+
+    <!-- BEGIN CORE TEMPLATE JS -->
+    <script type="text/javascript" src="../pages/js/pages.min.js" type="text/javascript"></script>
+    <!-- END CORE TEMPLATE JS -->
+
+
+	<!-- LoginETC -->
+	<script>
+
+
+		var swiper;
+		var currentPersonUid;
+
+		//////////////////////// INIT TABLE /////////////////////////
+
+		var settings = {
+							"sDom": "<t><'row'<p i>>",
+							"destroy": true,
+							"scrollCollapse": true,
+							"oLanguage": {
+									"sLengthMenu": "_MENU_ ",
+									"sInfo": "Showing <b>_START_ to _END_</b> of _TOTAL_ entries"
+							},
+							"scrollX": true,
+					bLengthChange : false,
+					lengthChange: false,
+					"pagingType": "numbers",
+					columnDefs: [
+					 { orderable: false, targets: -1 }
+				 ],
+				 'createdRow': function(row, data, dataIndex){
+			      $('td:eq(6)', row).css('min-width', '100px');
+			   },
+					"fnDrawCallback": function(oSettings) {
+								$('.dataTables_scrollHead').hide();
+							 if ($('#example tr').length < 11) {
+									 $('.dataTables_paginate').hide();
+									 $('.dataTables_info').hide();
+							 }
+					 }
+		};
+
+		var usersTable = $('#usersTable').DataTable(settings);
+
+		// search box for table
+		$('#search-table-full').keyup(function() {
+			usersTable.search($(this).val()).draw();
+		});
+
+
+		//////////////////////// USER HANDLING /////////////////////////
+
+		document.addEventListener('DOMContentLoaded', function() {
+			const db = firebase.firestore();
+
+			firebase.auth().onAuthStateChanged((user) => {
+				if(user){
+
+					console.log(user);
+
+					if(user.photoURL)
+						$('#account-photo').attr("src", user.photoURL);
+						$('#account-profileImage').css('background-image', 'url(' + user.photoURL + ')' )
+
+					if(user.displayName)
+						$('#account-name').html(user.displayName);
+
+						$('#account-displayname').html(user.displayName);
+						$('#account-email').html(user.email);
+						if(user.isAdmin){
+							$('#account-isadmin').html('Admin');
+						} else {
+							$('#account-isadmin').html('Author');
+						}
+
+
+
+					var userdoc = db.collection("users").doc(user.uid).get().then((doc) => {
+							if (doc.exists) {
+								if (doc.data().isAdmin) {
+									console.log("User is an Admin");
+								} else {
+									console.log("User is not an Admin");
+									// window.location.href = '../';
+								}
+							} else {
+									console.log("No such document!");
+									window.location.href = '../error';
+							}
+					}).catch((error) => {
+							console.log("Error getting document:", error);
+					});
+
+				} else {
+					window.location.href = '../login';
+				}
+
+			});
+
+			$('#sign-out').click(function() { firebase.auth().signOut() });
+
+
+			//SETUP SKILL EDITOR
+			var skillGroups = '';
+			var skillEditorHTML = '';
+			var count = 0;
+			db.collection("skills").get().then((querySnapshot) => {
+
+					querySnapshot.forEach((doc) => {
+							var options = '';
+							var optionsArray = [];
+							doc.data().options.forEach((option) => {
+								optionsArray.push(option);
+								if(options == ''){
+									options = options + option;
+								} else {
+									options = options + ', ' + option;
+								}
+							});
+							var skillGroup = '<div class="d-flex category-row skill-row">' +
+																'<div class="col-3 no-padding">' +
+																	'<div class="form-group form-group-default">' +
+																		'<input type="text" value="' + doc.data().title + '" class="form-control">' +
+																	'</div>' +
+																'</div>' +
+																'<div class="col-8 no-padding">' +
+																	'<div class="form-group form-group-default form-group-right">' +
+																		'<input id="#tagsinput'+ count +'" type="text" value="'+ options +'" data-role="tagsinput" />' +
+																	'</div>' +
+																'</div>' +
+																'<div class="col-1 no-padding">' +
+																	'<div class="form-group form-group-default form-group-right no-focus">' +
+																	'<button  aria-label="Delete" data-uid="'+ doc.id + '" type="button" class="edit-button btn btn-achtung btn-animated from-top"> <span> <i class="pg-icon">trash_alt</i> </span> <span class="hidden-block"> <i class="pg-icon">trash_alt</i> </span> </button>'
+																	'</div>' +
+																'</div>' +
+															'</div>';
+
+							$("#skills-editor").append(skillGroup);
+							count++;
+
+					});
+
+					$(function () {
+			 $('input[data-role=tagsinput]').tagsinput();
+	 });
+
+			});
+
+			//SHOW REVIEW COUNT
+			db.collection("contacts").where("approvedStatus", "==", "pending").get().then(function(querySnapshot) {
+				var count = 0;
+				querySnapshot.forEach(function(doc) {
+					count ++
+				});
+				if(count > 0){$("#menu-review-icon").html(count).addClass('highlight')}
+			});
+
+			function addUsersToTable() {
+
+				db.collection("users").get().then((querySnapshot) => {
+					querySnapshot.forEach(function(doc) {
+						console.log(doc.data());
+ 						usersTable.row.add([
+							makeAvatarDisplayName(doc.data()),
+							doc.data().email,
+							makeRole(doc.data()),
+							'<button aria-label="" data-uid="'+ doc.data().id + '" type="button" class="btn btn-achtung btn-animated from-top"> <span> <i class="pg-icon">edit</i> </span> <span class="hidden-block"> <i class="pg-icon">edit</i> </span> </button>'
+						]);
+
+						setTimeout(function(){
+							$(":button[data-uid='" + doc.id + "']").parent().parent().attr('data-toggle', 'modal').attr('data-target', '#modalContactView').attr('data-uid', doc.id );
+						}, 100);
+
+					});
+					usersTable.draw();
+					$(window).trigger('resize');
+
+					$('#contactTableWrapper').removeClass('hideMe');
+
+					// $('#usersTable tr').on('click', function() {
+					// 	var uid = $(this).attr('data-uid');
+					// 	// console.log($(this).attr('data-uid') || 'no uid');\
+					// 	if(uid){
+					// 		putPersonInModal(uid);
+					// 	}
+					// });
+
+				});
+
+			}
+			addUsersToTable();
+
+
+			function makeAvatarName(person){
+				if(person.profileImageUrl){
+					return '<div class="flex-cell"><span class="thumbnail-wrapper d32 circular inline"><img src="'+ person.profileImageUrl +'" alt="" data-src="'+ person.profileImageUrl +'" data-src-retina="'+ person.profileImageUrl +'" width="32" height="32"></span><span class="name">'+ person.firstName + ' ' + person.lastName +'</span></div>'
+				} else 	{
+					return '<div class="flex-cell"><span class="thumbnail-wrapper d32 circular inline"></span><span class="name">'+ person.firstName + ' ' + person.lastName +'</span></div>'
+				}
+			}
+
+			function makeAvatarDisplayName(person){
+				if(person.profileImageUrl){
+					return '<div class="flex-cell"><span class="thumbnail-wrapper d32 circular inline"><img src="'+ person.profileImageUrl +'" alt="" data-src="'+ person.profileImageUrl +'" data-src-retina="'+ person.profileImageUrl +'" width="32" height="32"></span><span class="name">'+ person.displayName +'</span></div>'
+				} else 	{
+					return '<div class="flex-cell"><span class="thumbnail-wrapper d32 circular inline"></span><span class="name">'+ person.displayName +'</span></div>'
+				}
+			}
+
+			function makeRole(person){
+				if(person.isAdmin){
+					return '<select class="cs-select cs-skin-slide admin-select" data-init-plugin="cs-select"><option value="true" selected>Admin</option><option value="false">Author</option></select>'
+				} else 	{
+					return '<select class="cs-select cs-skin-slide admin-select" data-init-plugin="cs-select"><option value="true">Admin</option><option value="false" selected>Author</option></select>'
+				}
+			}
+
+			function makeButtons(person){
+				var linkshtml = '';
+
+				if(person.website != '' && person.website != undefined)
+					linkshtml = linkshtml + '<a target="_blank" href="'+ person.website +'" aria-label="" type="button" class="btn btn-achtung"><span> <i class="fas fa-globe-europe"></i> </span></a>'
+
+				if(person.linkedin != '' && person.linkedin != undefined)
+					linkshtml = linkshtml + '<a target="_blank" href="'+ person.linkedin +'" aria-label="" type="button" class="btn btn-achtung"><span> <i class="fab fa-linkedin"></i> </span></a>'
+
+				if(person.instagram != '' && person.instagram != undefined)
+					linkshtml = linkshtml + '<a target="_blank" href="'+ person.instagram +'" aria-label="" type="button" class="btn btn-achtung"><span> <i class="fab fa-instagram"></i> </span></a>'
+
+				return linkshtml
+			}
+			function makePosition(person){
+				if(person.status != 'Freelancer'){
+					return 	person.jobTitle + ', ' + person.company;
+				} else {
+					return 	'Freelancer';
+				}
+			}
+			function makeTags(tagArray){
+				var html = '';
+				tagArray.forEach(function(item) {
+				    html = html + ' <button class="btn btn-chip">'+ item +'</button>';
+				});
+				return html
+			}
+
+
+			//////////////////////// HELPERS /////////////////////////
+
+			$('.copy-input').on('click', function() {
+				  // finds data-clipboard-test for content p class "click"
+				   copyText = $(this).find( "input" );
+					 /* Select the text field */
+					 copyText.select();
+					 /* Copy the text inside the text field */
+					 document.execCommand("copy");
+
+					 $('body').pgNotification({
+						 	style: 'bar',
+							message: 'Copied to clipboard!',
+							timeout: 1500,
+							type: 'success',
+							position: 'top'
+					 }).show();
+
+				})
+
+
+
+		});// END ON DOM LOADED
+
+
+	</script>
+	<!-- END PAGE LEVEL JS -->
+</body>
+
+</html>

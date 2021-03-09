@@ -1,0 +1,22 @@
+.widget-11{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    .card-body{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 991px) {
+  .widget-11{
+    position: relative;
+    .widget-11-table{
+      height: 273px;
+    }
+  }
+}
+

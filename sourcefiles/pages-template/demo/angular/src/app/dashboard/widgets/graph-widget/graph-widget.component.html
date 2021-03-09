@@ -1,0 +1,131 @@
+<pgcard TimeOut="3000" AdditionalClasses="widget-12 card no-border widget-loader-circle no-margin full-height"
+ Maximize="false" Toggle="false" Close="false" HeaderClass="top-right hidden-xlg">
+ 	<ng-template #CardExtraControls>
+		<li>
+			<div class="dropdown" dropdown>
+				<a href="javascript:void(0);" dropdownToggle role="button" aria-expanded="false">
+				<i class="card-icon card-icon-settings "></i>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" *dropdownMenu  role="menu" aria-labelledby="card-settings">
+					<a href="javascript:void(0);" class="dropdown-item">AAPL</a>
+					<a href="javascript:void(0);" class="dropdown-item">YHOO</a>
+					<a href="javascript:void(0);" class="dropdown-item">GOOG</a>
+				</div>
+			</div>
+		</li>
+	</ng-template>
+	<div class="row full-height">
+		<div class="{{_chartWrapperClass}}">
+			<div class="p-l-5 full-height inner-wrapper">
+				<div>
+					<h2 class="pull-left m-t-5 m-b-5">Tesla Inc.</h2>
+
+						<h2 class="pull-right m-r-25 m-t-5 m-b-5 text-success">
+							<i class="pg-icon m-r-5">arrow_up</i>
+							<span class="">448.97</span>
+							<span class="text-success fs-12">+318.24</span>
+						</h2>
+
+					<div class="clearfix"></div>
+				</div>
+				<div class="full-width">
+					<ul class="list-inline">
+						<li>
+							<a href="javascript:void(0)" class="font-montserrat text-color">1D</a>
+						</li>
+						<li class="active">
+							<a href="javascript:void(0)" class="font-montserrat fs-12   bg-contrast-low text-color">5D</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="font-montserrat text-color">1M</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="font-montserrat text-color">1Y</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nvd3-line line-chart text-center" data-x-grid="false">
+					<nvd3 [options]="nvd3LineOptions" [data]="nvd3LineData"></nvd3>
+				</div>
+			</div>
+		</div>
+		<div class="{{_chartHighlightsClass}}">
+			<div class="widget-12-search">
+				<p class="pull-left">Stocks list</p>
+				<button aria-label="" class="btn btn-default btn-rounded btn-icon pull-right">
+					<i class="pg-icon">add</i>
+				</button>
+				<div class="clearfix"></div>
+				<input type="text" placeholder="Search list" class="form-control m-t-5">
+			</div>
+			<div class="company-stat-boxes">
+				<div data-index="0" class="company-stat-box m-t-15 active p-l-5 p-r-5 p-t-10 p-b-10 b-b b-grey">
+					<div class="pull-left">
+						<p class="company-name pull-left text-uppercase bold no-margin">
+							<span class="text-success fs-11"></span> AAPL
+						</p>
+						<small class="hint-text m-l-10">Apple Inc.</small>
+					</div>
+					<div class="pull-right">
+						<p class="small hint-text no-margin inline">325.73</p>
+						<span class="label label-success m-l-5 inline">+ 12.09</span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div data-index="1" class="company-stat-box active p-l-5 p-r-5 p-t-15 p-b-10 b-b b-grey">
+					<div class="pull-left">
+						<p class="company-name pull-left text-uppercase bold no-margin">
+							<span class="text-success fs-11"></span> GOOG
+						</p>
+						<small class="hint-text m-l-10">Alphabet Inc.</small>
+					</div>
+					<div class="pull-right">
+						<p class="small hint-text no-margin inline">1407.73</p>
+						<span class="label label-important m-l-5 inline">- 1.09</span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div data-index="2" class="company-stat-box active p-l-5 p-r-5 p-t-15 p-b-10 b-b b-grey">
+					<div class="pull-left">
+						<p class="company-name pull-left text-uppercase bold no-margin">
+							<span class="text-success fs-11"></span> YHOO
+						</p>
+						<small class="hint-text m-l-10">Yahoo Inc.</small>
+					</div>
+					<div class="pull-right">
+						<p class="small hint-text no-margin inline">37.73</p>
+						<span class="label label-success m-l-5 inline">+ 0.09</span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div data-index="3" class="company-stat-box active p-l-5 p-r-5 p-t-15 p-b-10 b-b b-grey">
+					<div class="pull-left">
+						<p class="company-name pull-left text-uppercase bold no-margin">
+							<span class="text-success fs-11"></span> NKE
+						</p>
+						<small class="hint-text m-l-10">Nike Inc.</small>
+					</div>
+					<div class="pull-right">
+						<p class="small hint-text no-margin inline">100.02</p>
+						<span class="label label-important m-l-5 inline">- 0.04</span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div data-index="4" class="company-stat-box active p-l-5 p-r-5 p-t-15 p-b-10">
+					<div class="pull-left">
+						<p class="company-name pull-left text-uppercase bold no-margin">
+							<span class="text-success fs-11"></span> TSLA
+						</p>
+						<small class="hint-text m-l-10">Tesla Inc.</small>
+					</div>
+					<div class="pull-right">
+						<p class="small hint-text no-margin inline">537.73</p>
+						<span class="label label-success m-l-5 inline">+ 0.09</span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<span class="pull-bottom hint-text small widget-12-footer-text">VIA YAHOO Finance (Stock market API)(800) MY-STOCKS (800-692-7753)</span>
+		</div>
+	</div>
+</pgcard>

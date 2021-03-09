@@ -1,0 +1,378 @@
+<pgcard TimeOut="3000" *ngIf="_type === 'compact'"
+  AdditionalClasses="widget-17 card  no-border no-margin widget-loader-circle" Maximize="false" Toggle="false"
+  Close="false">
+  <ng-template #CardTitle>
+
+    <span class="font-montserrat fs-11 all-caps">
+      <i class="pg-icon">map</i> California, USA
+      <span class="caret"></span>
+    </span>
+  </ng-template>
+  <ng-template #CardExtraControls>
+    <li>
+      <div class="dropdown" dropdown>
+        <a href="javascript:void(0);" dropdownToggle role="button" aria-expanded="false">
+          <i class="card-icon card-icon-settings "></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" *dropdownMenu role="menu" aria-labelledby="card-settings">
+          <a href="javascript:void(0);" class="dropdown-item">AAPL</a>
+          <a href="javascript:void(0);" class="dropdown-item">YHOO</a>
+          <a href="javascript:void(0);" class="dropdown-item">GOOG</a>
+        </div>
+      </div>
+    </li>
+  </ng-template>
+  <div class="p-l-5">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="row m-t-20">
+          <div class="col-lg-5">
+            <h4 class="no-margin">Monday</h4>
+            <p class="small hint-text">9th August 2020</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="d-flex pull-right">
+              <canvas height="46" width="46" class="clear-day hint-text"></canvas>
+              <h2 class="text-danger bold no-margin p-l-10">32°
+              </h2>
+            </div>
+          </div>
+        </div>
+        <h5>Feels like
+          <span class="semi-bold">rainy</span>
+        </h5>
+        <p>Weather information</p>
+        <div class="widget-17-weather">
+          <div class="row">
+            <div class="col-6 p-r-10">
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left">Wind</p>
+                  <p class="pull-right bold">11km/h</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left">Sunrise</p>
+                  <p class="pull-right bold">05:20</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left">Humidity</p>
+                  <p class="pull-right bold">20%</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left">Precipitation</p>
+                  <p class="pull-right bold">60%</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 p-l-10">
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left">Sunset</p>
+                  <p class="pull-right bold">21:05</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left">Visibility</p>
+                  <p class="pull-right bold">21km</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row m-t-10 timeslot">
+          <div class="col-2 p-t-10 text-center">
+            <p class="small">13:30</p>
+            <canvas height="25" width="25" id="partly-cloudy-day"></canvas>
+            <p class="text-danger bold">30°C</p>
+          </div>
+          <div class="col-2 p-t-10 text-center">
+            <p class="small">14:00</p>
+            <canvas height="25" width="25" id="cloudy"></canvas>
+            <p class="text-danger bold">30°C</p>
+          </div>
+          <div class="col-2 p-t-10 text-center">
+            <p class="small">14:30</p>
+            <canvas height="25" width="25" id="rain"></canvas>
+            <p class="text-danger bold">30°C</p>
+          </div>
+          <div class="col-2 p-t-10 text-center">
+            <p class="small">15:00</p>
+            <canvas height="25" width="25" id="sleet"></canvas>
+            <p class="text-danger bold">30°C</p>
+          </div>
+          <div class="col-2 p-t-10 text-center">
+            <p class="small">15:30</p>
+            <canvas height="25" width="25" id="snow"></canvas>
+            <p class="text-danger bold">30°C</p>
+          </div>
+          <div class="col-2 p-t-10 text-center">
+            <p class="small">16:00</p>
+            <canvas height="25" width="25" id="wind"></canvas>
+            <p class="text-danger bold">30°C</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 d-none d-sm-none d-md-block d-lg-block d-xl-block">
+        <div class="row">
+          <div class="forecast-day col-sm-6 text-center m-t-10 ">
+            <div class="bg-master-lightest p-b-10 p-t-10">
+              <h4 class="p-t-10 no-margin">Tuesday</h4>
+              <p class="small hint-text m-b-20">11th Augest 2014</p>
+              <canvas id="rain2" width="64" height="64"></canvas>
+              <h5 class="text-danger">32°</h5>
+              <p>Feels like
+                <span class="bold">sunny</span>
+              </p>
+              <p class="small">Wind
+                <span class="bold p-l-20">11km/h</span>
+              </p>
+              <div class="m-t-20 block">
+                <div class="padding-10">
+                  <div class="row">
+                    <div class="col-lg-6 text-center">
+                      <p class="small">Noon</p>
+                      <canvas id="sleet2" width="25" height="25"></canvas>
+                      <p class="text-danger bold">30°C</p>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                      <p class="small">Night</p>
+                      <canvas id="wind2" width="25" height="25"></canvas>
+                      <p class="text-danger bold">30°C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 text-center m-t-10 ">
+            <div class="bg-master-lightest p-b-10 p-t-10">
+              <h4 class="p-t-10 no-margin">Wednesday</h4>
+              <p class="small hint-text m-b-20">11th Augest 2014</p>
+              <canvas id="rain3" width="64" height="64"></canvas>
+              <h5 class="text-danger">32°</h5>
+              <p>Feels like
+                <span class="bold">sunny</span>
+              </p>
+              <p class="small">Wind
+                <span class="bold p-l-20">11km/h</span>
+              </p>
+              <div class="m-t-20 block">
+                <div class="padding-10">
+                  <div class="row">
+                    <div class="col-lg-6 text-center">
+                      <p class="small">Noon</p>
+                      <canvas id="sleet3" width="25" height="25"></canvas>
+                      <p class="text-danger bold">30°C</p>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                      <p class="small">Night</p>
+                      <canvas id="wind3" width="25" height="25"></canvas>
+                      <p class="text-danger bold">30°C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</pgcard>
+
+<pgcard TimeOut="3000" *ngIf="_type !== 'compact'"
+  AdditionalClasses="widget-17 card  no-border no-margin widget-loader-circle" Maximize="false" Toggle="false"
+  Close="false">
+  <ng-template #CardTitle>
+
+    <span class="font-montserrat fs-11 all-caps d-flex align-items-center">
+      <i class="pg-icon">map</i> California, USA
+      <span class="caret"></span>
+    </span>
+  </ng-template>
+  <ng-template #CardExtraControls>
+    <li>
+      <div class="dropdown" dropdown>
+        <a href="javascript:void(0);" dropdownToggle role="button" aria-expanded="false">
+          <i class="card-icon card-icon-settings "></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" *dropdownMenu role="menu" aria-labelledby="card-settings">
+          <a href="javascript:void(0);" class="dropdown-item">AAPL</a>
+          <a href="javascript:void(0);" class="dropdown-item">YHOO</a>
+          <a href="javascript:void(0);" class="dropdown-item">GOOG</a>
+        </div>
+      </div>
+    </li>
+  </ng-template>
+  <div class="p-l-5 p-t-10">
+    <div class="row">
+
+      <div class="col-lg-12 col-xlg-6">
+        <div class="row m-t-10">
+          <div class="col-5">
+            <h4 class="no-margin">Monday</h4>
+            <p class="small hint-text">9th August 2020</p>
+          </div>
+          <div class="col-7">
+            <div class="d-flex pull-right">
+              <canvas height="46" width="46" id="clear-day" class="hint-text"></canvas>
+              <h2 class="text-danger bold no-margin p-l-10">32°</h2>
+            </div>
+          </div>
+        </div>
+        <div class="m-t-25 p-b-10">
+          <p class="pull-left no-margin hint-text">Weather information</p>
+          <a href="#" class="btn-icon-link d-flex pull-right"><i class="pg-icon">more_horizontal</i></a>
+          <div class="clearfix"></div>
+        </div>
+        <div class="widget-17-weather b-t b-grey p-t-20">
+          <div class="weather-info row">
+            <div class="col-6 p-r-15">
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left no-margin hint-text fs-13">Wind</p>
+                  <p class="pull-right no-margin fs-13">11km/h</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left no-margin hint-text fs-13">Sunrise</p>
+                  <p class="pull-right no-margin fs-13">05:20</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left no-margin hint-text fs-13">Humidity</p>
+                  <p class="pull-right no-margin fs-13">20%</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left no-margin hint-text fs-13">Precipitation</p>
+                  <p class="pull-right no-margin fs-13">60%</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 p-l-15">
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left no-margin hint-text fs-13">Sunset</p>
+                  <p class="pull-right no-margin fs-13">21:05</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="pull-left no-margin hint-text fs-13">Visibility</p>
+                  <p class="pull-right no-margin fs-13">21km</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row m-t-10 timeslot">
+          <div class="col-2 p-t-10 text-center b-r b-dashed b-grey">
+            <p class="small">13:30</p>
+            <canvas height="25" width="25" id="partly-cloudy-day"></canvas>
+            <p class="text-danger bold">30°C</p>
+          </div>
+          <div class="col-2 p-t-10 text-center b-r b-dashed b-grey">
+            <p class="small">14:00</p>
+            <canvas height="25" width="25" id="cloudy"></canvas>
+            <p class="text-danger bold">30°C</p>
+          </div>
+          <div class="col-2 p-t-10 text-center b-r b-dashed b-grey">
+            <p class="small">14:30</p>
+            <canvas height="25" width="25" id="rain"></canvas>
+            <p class="text-danger bold">30°C</p>
+          </div>
+          <div class="col-2 p-t-10 text-center b-r b-dashed b-grey">
+            <p class="small">15:00</p>
+            <canvas height="25" width="25" id="sleet"></canvas>
+            <p class="text-success bold">27°C</p>
+          </div>
+          <div class="col-2 p-t-10 text-center b-r b-dashed b-grey">
+            <p class="small">15:30</p>
+            <canvas height="25" width="25" id="snow"></canvas>
+            <p class="text-success bold">16°C</p>
+          </div>
+          <div class="col-2 p-t-10 text-center b-r b-dashed b-grey">
+            <p class="small">16:00</p>
+            <canvas height="25" width="25" id="wind"></canvas>
+            <p class="text-success bold">21°C</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xlg-6 visible-xlg p-l-20">
+        <div class="row">
+          <div class="forecast-day col-lg-6 text-center m-t-10 ">
+            <div class="bg-master-lightest p-b-10 p-t-10">
+              <h4 class="p-t-10 no-margin">Tuesday</h4>
+              <p class="small hint-text m-b-20">11th Augest 2014</p>
+              <canvas id="rain2" width="64" height="64"></canvas>
+              <h5 class="text-danger">32°</h5>
+              <p>Feels like
+                <span class="bold">sunny</span>
+              </p>
+              <p class="small">Wind
+                <span class="bold p-l-20">11km/h</span>
+              </p>
+              <div class="m-t-20 block">
+                <div class="padding-10">
+                  <div class="row">
+                    <div class="col-lg-6 text-center">
+                      <p class="small">Noon</p>
+                      <canvas id="sleet2" width="25" height="25"></canvas>
+                      <p class="text-danger bold">30°C</p>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                      <p class="small">Night</p>
+                      <canvas id="wind2" width="25" height="25"></canvas>
+                      <p class="text-danger bold">30°C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center m-t-10 m-t-10 b-l b-grey b-dashed ">
+            <div class="bg-master-lightest p-b-10 p-t-10">
+              <h4 class="p-t-10 no-margin">Wednesday</h4>
+              <p class="small hint-text m-b-20">11th Augest 2014</p>
+              <canvas id="rain3" width="64" height="64"></canvas>
+              <h5 class="text-danger">32°</h5>
+              <p>Feels like
+                <span class="bold">sunny</span>
+              </p>
+              <p class="small">Wind
+                <span class="bold p-l-20">11km/h</span>
+              </p>
+              <div class="m-t-20 block">
+                <div class="padding-10">
+                  <div class="row">
+                    <div class="col-lg-6 text-center">
+                      <p class="small">Noon</p>
+                      <canvas id="sleet3" width="25" height="25"></canvas>
+                      <p class="text-danger bold">30°C</p>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                      <p class="small">Night</p>
+                      <canvas id="wind3" width="25" height="25"></canvas>
+                      <p class="text-danger bold">30°C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</pgcard>

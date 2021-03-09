@@ -1,0 +1,369 @@
+<!-- START CONTAINER FLUID -->
+<pg-container>
+  <!-- START BREADCRUMB -->
+  <pg-breadcrumb>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+      <li class="breadcrumb-item active">Form layouts</li>
+    </ol>
+  </pg-breadcrumb>
+
+  <!-- END BREADCRUMB -->
+  <div class="row m-t-30">
+    <div class="col-lg-6 ">
+      <div class="card card-transparent">
+        <div class="card-header">
+          <div class="card-title">
+            Validation
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Showcase and guide users with a<br>
+            better User Interface &amp; Experience.</h3>
+          <p>Forms are one of the most important components<br>
+            when it comes to a dashboard. Recognizing that fact, users are<br>
+            able work in a maximum content width.</p><br>
+          <p class="small hint-text m-t-5">VIA senior product manager<br>
+            for UI/UX at REVOX</p><button class="btn btn-primary btn-cons">More</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 ">
+      <div class="card card-default">
+        <div class="card-header ">
+          <div class="card-title">MODERN LAYOUT.
+          </div>
+        </div>
+        <div class="card-body">
+          <h2 class="mw-80">Get started with your account.</h2>
+          <p class="fs-16 mw-80 m-b-40">Find your people. Engage your customers. Build your brand. Do it all with Page's
+            UI Framework Platform. Already have an account? <a href="#">Log in</a></p>
+          <form id="form-personal" role="form" autocomplete="off" #basicForm="ngForm">
+            <div class="row clearfix">
+              <div class="col-md-6">
+                <div pgFormGroupDefault class="form-group form-group-default required"
+                  [class.has-error]="basicFormfname.invalid && (basicFormfname.dirty || basicFormfname.touched)">
+                  <label>First name</label>
+                  <input type="text" class="form-control" id="fName" name="fName" [(ngModel)]="fName"
+                    #basicFormfname="ngModel" required>
+                </div>
+                <div *ngIf="basicFormfname.invalid && (basicFormfname.dirty || basicFormfname.touched)">
+                  <label *ngIf="basicFormfname.errors.required" class="error">This field is required.</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div pgFormGroupDefault class="form-group form-group-default"
+                  [class.has-error]="basicFormLName.invalid && (basicFormLName.dirty || basicFormLName.touched)">
+                  <label>Last name</label>
+                  <input type="text" class="form-control" name="lastName" [(ngModel)]="lName" #basicFormLName="ngModel"
+                    required>
+                </div>
+                <div *ngIf="basicFormLName.invalid && (basicFormLName.dirty || basicFormLName.touched)">
+                  <label *ngIf="basicFormLName.errors.required" class="error">This field is required.</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div pgFormGroupDefault class="form-group form-group-default input-group"
+                  [class.has-error]="basicFormUsername.invalid && (basicFormUsername.dirty || basicFormUsername.touched)">
+                  <div class="form-input-group">
+                    <label>Pages username</label>
+                    <input type="text" class="form-control" name="username"
+                      placeholder="yourname.pages.com (this can be changed later)" [(ngModel)]="username"
+                      #basicFormUsername="ngModel" required>
+                  </div>
+                  <div class="input-group-append ">
+                    <span class="input-group-text">.pages.com
+                    </span>
+                  </div>
+                </div>
+                <div *ngIf="basicFormUsername.invalid && (basicFormUsername.dirty || basicFormUsername.touched)">
+                  <label *ngIf="basicFormUsername.errors.required" class="error">This field is required.</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div pgFormGroupDefault class="form-group form-group-default"
+                  [class.has-error]="basicFormPassword.invalid && (basicFormPassword.dirty || basicFormPassword.touched)">
+                  <label>Password</label>
+                  <input type="password" class="form-control" name="password" placeholder="Minimum of 4 characters."
+                    [(ngModel)]="password" #basicFormPassword="ngModel" required minlength="4">
+                </div>
+                <div *ngIf="basicFormPassword.invalid && (basicFormPassword.dirty || basicFormPassword.touched)">
+                  <label *ngIf="basicFormPassword.errors.required" class="error">This field is required.</label>
+                  <label *ngIf="basicFormPassword.errors.minlength" class="error">Minimum Length is 4</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div pgFormGroupDefault class="form-group form-group-default"
+                  [class.has-error]="basicFormEmail.invalid && (basicFormEmail.dirty || basicFormEmail.touched)">
+                  <label>Email</label>
+                  <input type="email" class="form-control" name="email"
+                    placeholder="We’ll send your login details to this address" [(ngModel)]="email"
+                    #basicFormEmail="ngModel" required>
+                </div>
+                <div *ngIf="basicFormEmail.invalid && (basicFormEmail.dirty || basicFormEmail.touched)">
+                  <label *ngIf="basicFormEmail.errors.required" class="error">This field is required.</label>
+                </div>
+              </div>
+            </div>
+            <div class="row m-t-25">
+              <div class="col-xl-6 p-b-10">
+                <p class="small-text hint-text">By clicking the "Get Started!" button, you are creating a Pages account,
+                  and you agree to Pages's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+              </div>
+              <div class="col-xl-6">
+                <button class="btn btn-primary pull-right btn-lg btn-block" type="submit"
+                  [class.disabled]="basicForm.invalid">Get Started</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 ">
+      <div class="card card-default">
+        <div class="card-header ">
+          <div class="card-title">SEPARATED FORM LAYOUTS
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="mw-80">Contemporary and unique</h3>
+          <p class="mw-80 m-b-25">Want it to be more Descriptive and User-Friendly, We Made it possible, Use Separated
+            Form Layouts Structure to Presentation your Form Fields.
+            <p>Basic Information</p>
+            <form id="form-project" role="form" autocomplete="off" [formGroup]="attachedForm"
+              (ngSubmit)="_submitForm()">
+              <div class="form-group-attached">
+                <div pgFormGroupDefault class="form-group form-group-default required"
+                  [class.has-error]="getFormControl('projectName').invalid && (getFormControl('projectName').dirty || getFormControl('projectName').touched)">
+                  <label>Project name</label>
+                  <input type="text" class="form-control" name="projectName" formControlName="projectName">
+                  <div class="invalid-tooltip"
+                    *ngIf="getFormControl('projectName').invalid && (getFormControl('projectName').dirty || getFormControl('projectName').touched)">
+                    This field is required.
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="col-md-6">
+                    <div pgFormGroupDefault class="form-group form-group-default required"
+                      [class.has-error]="getFormControl('firstName').invalid && (getFormControl('firstName').dirty || getFormControl('firstName').touched)">
+                      <label>First name</label>
+                      <input type="text" class="form-control" name="firstName" formControlName="firstName">
+                      <div class="invalid-tooltip"
+                        *ngIf="getFormControl('firstName').invalid && (getFormControl('firstName').dirty || getFormControl('firstName').touched)">
+                        This field is required.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div pgFormGroupDefault class="form-group form-group-default">
+                      <label>Last name</label>
+                      <input type="text" class="form-control" name="lastName" formControlName="lastName">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="m-t-10">Advanced Information</p>
+              <div class="form-group-attached">
+                <div pgFormGroupDefault class="form-group form-group-default">
+                  <label>Investor <i class="fa fa-info text-complete m-l-5"></i>
+                  </label>
+                  <input type="text" class="form-control" name="investor" formControlName="investor">
+                </div>
+                <div class="row clearfix">
+                  <div class="col-md-6">
+                    <div pgFormGroupDefault class="form-group form-group-default required"
+                      [class.has-error]="getFormControl('startDate').invalid && (getFormControl('startDate').dirty || getFormControl('startDate').touched)">
+                      <label>Starting date</label>
+                      <pg-datepicker formControlName="startDate"></pg-datepicker>
+                      <div class="invalid-tooltip"
+                        *ngIf="getFormControl('startDate').invalid && (getFormControl('startDate').dirty || getFormControl('startDate').touched)">
+                        This field is required.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-group-default">
+                      <label>Deadline</label>
+                      <pg-datepicker formControlName="endDate"></pg-datepicker>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div pgFormGroupDefault class="form-group form-group-default required"
+                      [class.has-error]="getFormControl('url').invalid && (getFormControl('url').dirty || getFormControl('url').touched)">
+                      <label>Website</label>
+                      <input type="text" class="form-control" name="url" formControlName="url">
+                      <div class="invalid-tooltip"
+                        *ngIf="getFormControl('url').invalid && (getFormControl('url').dirty || getFormControl('url').touched)">
+                        This field is required.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group form-group-default form-check-group d-flex align-items-center">
+                      <div class="form-check switch switch-lg success full-width right m-b-0">
+                        <input type="checkbox" id="switchSample">
+                        <label for="switchSample">Availability</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div pgFormGroupDefault class="form-group form-group-default input-group">
+                      <div class="form-input-group">
+                        <label>Budget</label>
+                        <input type="text" class="form-control usd" formControlName="budget">
+                      </div>
+                      <div class="input-group-append ">
+                        <span class="input-group-text">USD
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div pgFormGroupDefault class="form-group form-group-default input-group">
+                      <div class="form-input-group">
+                        <label>Profit</label>
+                        <input type="text" class="form-control usd" formControlName="profit">
+                      </div>
+                      <div class="input-group-append ">
+                        <span class="input-group-text">USD
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div pgFormGroupDefault class="form-group form-group-default input-group">
+                      <div class="form-input-group">
+                        <label>Revenue</label>
+                        <input type="text" class="form-control usd" formControlName="revenue">
+                      </div>
+                      <div class="input-group-append ">
+                        <span class="input-group-text">USD
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-8">
+                  <div class="form-check success m-t-0">
+                    <input type="checkbox" checked="checked" value="1" id="checkbox-agree">
+                    <label for="checkbox-agree">I hereby certify that the information above is true and accurate
+                    </label>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <button class="btn btn-primary pull-right" type="submit">Create Droplet</button>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 ">
+      <div class="card card-default">
+        <div class="card-header ">
+          <div class="card-title">HORIZONTAL FORM LAYOUTS
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="mw-80">Simple but not simpler, create a separate form layout. Best for settings pages.</h3>
+          <p class="mw-80">Want it to be more Descriptive and User-Friendly, We Made it possible, Use Separated Form
+            Layouts Structure to Presentation your Form Fields.
+          </p>
+          <br>
+          <form id="horizontalForm" class="form-horizontal" role="form" autocomplete="off" #horizontalForm="ngForm">
+            <div class="form-group row"
+              [class.has-error]="HorizontalFormfname.invalid && (HorizontalFormfname.dirty || HorizontalFormfname.touched)">
+              <label for="fname" class="col-md-3 control-label">Name</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="fname2" placeholder="Full name" name="fname2"
+                  [(ngModel)]="HorizontalfName" #HorizontalFormfname="ngModel" required>
+                <div *ngIf="HorizontalFormfname.invalid && (HorizontalFormfname.dirty || HorizontalFormfname.touched)">
+                  <label *ngIf="HorizontalFormfname.errors.required" class="error">This field is required.</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 control-label">Formation</label>
+              <div class="col-md-9 d-flex align-items-center">
+                <div class="form-check form-check-inline success m-b-0">
+                  <input type="radio" value="male" name="optionyes" id="male">
+                  <label for="male">Clustered</label>
+                </div>
+                <div class="form-check form-check-inline success m-b-0">
+                  <input type="radio" checked="checked" value="female" name="optionyes" id="female">
+                  <label for="female">Stacked</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row"
+              [class.has-error]="HorizontalFormWork.invalid && (HorizontalFormWork.dirty || HorizontalFormWork.touched)">
+              <label class="col-md-3 control-label">Work</label>
+              <div class="col-md-9">
+                <p>Have you Worked at page Inc. before, Or joined the Pages Supirior Club?</p>
+                <p class="hint-text small">If yes State which Place, if yes note date and Job CODE / Membership Number
+                </p>
+                <div class="row">
+                  <div class="col-md-5">
+                    <input type="text" class="form-control" name="work" [(ngModel)]="HorizontalWork"
+                      #HorizontalFormWork="ngModel" required>
+                    <div *ngIf="HorizontalFormWork.invalid && (HorizontalFormWork.dirty || HorizontalFormWork.touched)">
+                      <label *ngIf="HorizontalFormWork.errors.required" class="error">This field is required.</label>
+                    </div>
+                  </div>
+                  <div class="col-md-5 sm-m-t-10">
+                    <input type="text" placeholder="Code/Number" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row"
+              [class.has-error]="HorizontalFormPostion.invalid && (HorizontalFormPostion.dirty || HorizontalFormPostion.touched)">
+              <label for="position" class="col-md-3 control-label">Position applying for</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="position" name="position" placeholder="Designation"
+                  [(ngModel)]="HorizontalPosition" #HorizontalFormPostion="ngModel" required>
+                <div
+                  *ngIf="HorizontalFormPostion.invalid && (HorizontalFormPostion.dirty || HorizontalFormPostion.touched)">
+                  <label *ngIf="HorizontalFormPostion.errors.required" class="error">This field is required.</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="name" class="col-md-3 control-label">Description</label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="name" placeholder="Briefly Describe your Abilities"></textarea>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-6">
+                <p class="small-text hint-text">Note: changes may take some time to apply. Wait a day and then try
+                  to verify again </p>
+              </div>
+              <div class="col-md-6">
+                <button class="btn btn-success" type="submit" [class.disabled]="horizontalForm.invalid">Save
+                  Changes</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</pg-container>
+<!-- END CONTAINER FLUID -->

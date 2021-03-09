@@ -1,0 +1,169 @@
+<!-- START APP -->
+<pg-secondary-sidebar>
+  <div class="m-b-20 m-l-30 m-r-10 d-sm-none d-md-block d-lg-block d-xl-block">
+    <a [routerLink]="['../compose']" class="btn btn-complete btn-block">Compose</a>
+  </div>
+  <p class="menu-title">BROWSE</p>
+  <ul class="main-menu">
+    <li class="active">
+      <a [routerLink]="['../list']">
+        <span class="title"><i class="pg-icon">inbox</i> Inbox</span>
+        <span class="badge pull-right">5</span>
+      </a>
+    </li>
+    <li class="">
+      <a [routerLink]="['../list']">
+        <span class="title"><i class="pg-icon">inbox_all</i> All mail</span>
+      </a>
+      <ul class="sub-menu no-padding">
+        <li>
+          <a [routerLink]="['../list']">
+            <span class="title">Important</span>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['../list']">
+            <span class="title">Labeled</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a [routerLink]="['../list']">
+        <span class="title"><i class="pg-icon">sent</i> Sent</span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['../list']">
+        <span class="title"><i class="pg-icon">spam</i> Spam</span>
+        <span class="badge pull-right">10</span>
+      </a>
+    </li>
+  </ul>
+  <p class="menu-title m-t-20 all-caps">Quick view</p>
+  <ul class="sub-menu no-padding">
+    <li>
+      <a href="javascript:void(0)">
+        <span class="title">Documents</span>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0)">
+        <span class="title">Flagged</span>
+        <span class="badge pull-right">5</span>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0)">
+        <span class="title">Images</span>
+      </a>
+    </li>
+  </ul>
+</pg-secondary-sidebar>
+<!-- END SECONDARY SIDEBAR MENU -->
+<div class="inner-content email-layout full-height">
+  <div class="split-view">
+    <!-- START SPLIT LIST VIEW -->
+    <div class="split-list" [class.slideLeft]="isEmailSelected">
+      <a class="list-refresh" href="javascript:void(0)"><i class="pg-icon">refresh_alt</i></a>
+      <pg-list-view-container class="scrollable full-height">
+        <pg-list-item *ngFor="let emailGroup of emailList">
+          <ng-template #ItemHeading>
+            {{emailGroup.group}}
+          </ng-template>
+          <li class="item padding-10 p-l-15" *ngFor="let item of emailGroup.list" (click)="onSelect(item)"
+            [class.active]="item === selectedEmail">
+            <div class="thumbnail-wrapper d32 circular"><img alt="" height="40" src="{{item.dp}}" width="40"></div>
+            <div class="form-check no-margin p-l-10">
+              <input id="emailcheckbox-0-{{item.id}}" type="checkbox" value="1"> <label
+                for="emailcheckbox-0-{{item.id}}" class="m-l-5 no-padding"></label>
+            </div>
+            <div class="inline">
+              <p class="recipients no-margin">{{item.from}}</p>
+              <div class="datetime">
+                11:23am
+              </div>
+              <p class="subject no-margin">{{item.subject}}</p>
+              <p class="body no-margin" innerHTML="{{item.body}}"></p>
+            </div>
+          </li>
+        </pg-list-item>
+      </pg-list-view-container>
+
+    </div>
+    <!-- END SPLIT LIST VIEW -->
+    <!-- START SPLIT DETAILS -->
+    <div class="split-details">
+      <ng-template #noResultBlock>
+        <div class="no-result">
+          <h1>No email has been selected</h1>
+        </div>
+      </ng-template>
+      <div *ngIf="selectedEmail; else noResultBlock" class="email-content-wrapper">
+        <div class="actions-wrapper menuclipper bg-master-lightest scrollable">
+          <div class="actions-wrapper menuclipper bg-contrast-lowest">
+            <button class="btn btn-link btn-sm d-lg-none d-xl-none sm-no-padding split-list-toggle" type="button">
+              <i class="pg-icon">chevron_left</i>
+            </button>
+            <button type="button" class="btn btn-link btn-sm">Reply</button>
+            <button type="button" class="btn btn-link btn-sm">Reply all</button>
+            <button type="button" class="btn btn-link btn-sm">Forward</button>
+            <button type="button" class="btn btn-link btn-sm">Delete</button>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="email-content-header">
+          <div class="subject m-b-20 semi-bold mw-80">
+            {{selectedEmail.subject}}
+          </div>
+          <div class="fromto row">
+            <div class="col-lg-8 d-flex align-items-center">
+              <div class="thumbnail-wrapper d48 circular m-r-10">
+                <img width="40" height="40" alt="" src="{{selectedEmail.dp}}">
+              </div>
+              <div class="">
+                <div class="btn-group dropdown-default m-r-10" dropdown>
+                  <a class="btn dropdown-toggle" dropdownToggle>{{selectedEmail.from}} </a>
+                  <div *dropdownMenu class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" href="javascript:void(0)">Action</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Friend</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Report</a>
+                  </div>
+                </div>
+              </div>
+              <label class="inline">
+                <span class="small-text">
+                  <span aria-hidden="true">&lt;</span>johnsmith@skyace.com
+                  <span aria-hidden="true">&gt;</span>
+                </span>
+              </label>
+            </div>
+            <div class="col-lg-4 d-flex align-items-center text-right sm-text-left">
+              <p class="datetime no-margin small-text full-width">
+                {{selectedEmail.datetime}}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="email-content">
+          <div class="clearfix"></div>
+          <div class="email-content-body m-t-20" innerHTML="{{selectedEmail.body}}">
+          </div>
+          <div class="wysiwyg5-wrapper m-t-30">
+            <quill-editor [styles]="{height: '200px'}" placeholder="Reply" [modules]="editorModules">
+            </quill-editor>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END SPLIT DETAILS -->
+    <!-- START COMPOSE BUTTON FOR TABS -->
+    <div class="compose-wrapper d-md-none">
+      <a class="compose-email text-info pull-right m-r-15 m-t-15" [routerLink]="['../compose']">
+        <i class="pg-icon">edit</i>
+      </a>
+    </div>
+    <!-- END COMPOSE BUTTON -->
+  </div>
+</div>
+<!-- END APP -->

@@ -1,0 +1,21 @@
+<pgcard TimeOut="3000" AdditionalClasses="widget-5 card no-border  widget-loader-bar full-height" Maximize="false" Toggle="false" Close="false" HeaderClass="top-right"
+ BodyClass="no-padding" ProgressType="bar">
+	<div class="container-xs-height full-height">
+		<div class="row row-xs-height">
+			<div class="col-xs-5 col-xs-height col-middle relative">
+				<div class="padding-15 full-height d-flex flex-column justify-content-between">
+					<p class=" hint-text">Today's sales</p>
+					<div>
+						<h3 class="hint-text no-margin text-ellipsis"><sup>$</sup>9,534<sup>.58</sup></h3>
+						<p class="text-success text-ellipsis">+$423.5 (2.65%)</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-7 col-xs-height col-bottom relative widget-5-chart-container" #chartContainer>
+				<div class="widget-5-chart rickshaw_graph">
+					<nvd3 [options]="chartOptions" [data]="chartData"></nvd3>
+				</div>
+			</div>
+		</div>
+	</div>
+</pgcard>

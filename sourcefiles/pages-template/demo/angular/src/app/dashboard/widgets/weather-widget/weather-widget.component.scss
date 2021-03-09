@@ -1,0 +1,16 @@
+$assets-url :"/assets";
+@import 'core.scss';
+
+:host  ::ng-deep .widget-6 {
+    background: mix($color-contrast-high, #fff, 69%);
+    .label {
+      background: rgba(0, 0, 0, .3);
+      color: rgba(255, 255, 255, .67);
+    }
+}
+
+:host  ::ng-deep .widget-17-weather {
+    .row {
+      margin-bottom: 12px;
+    }
+}
