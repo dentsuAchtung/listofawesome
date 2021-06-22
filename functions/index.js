@@ -11,6 +11,11 @@ exports.newUserSignup = functions.auth.user().onCreate((user) => {
     lists: [],
     isAdmin: false,
   });
+  admin.firestore().collection("users").doc(user.uid)
+      .collection("lists").doc().set({
+        title: "My first list",
+        people: [],
+      });
 });
 
 exports.userDeleted = functions.auth.user().onDelete((user) => {

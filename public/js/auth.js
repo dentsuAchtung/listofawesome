@@ -1,25 +1,24 @@
 
-// const loginForm = document.querySelector('.form-login');
-// const loginForm = document.querySelector('.form-login');
+const loginForm = document.querySelector('.form-login');
 const googleBtn = document.querySelector('#googleBtn');
 
 // Login form
-// loginForm.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//
-//       const email = loginForm.email.value;
-//       const password = loginForm.password.value;
-//
-//       firebase.auth().signInWithEmailAndPassword(email, password)
-//         .then((user) => {
-//           console.log('logged in', user);
-//           loginForm.reset();
-//         })
-//         .catch((error) => {
-//           console.log(error.message);
-//           loginForm.querySelector('#error-message').textContent = error.message;
-//         });
-// });
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+      const email = loginForm.email.value;
+      const password = loginForm.password.value;
+
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((user) => {
+          console.log('logged in', user);
+          loginForm.reset();
+        })
+        .catch((error) => {
+          console.log(error.message);
+          loginForm.querySelector('#error-message').textContent = error.message;
+        });
+});
 
 googleBtn.addEventListener('click', (e) => {
 
@@ -50,11 +49,11 @@ googleBtn.addEventListener('click', (e) => {
     // Handle Errors here.
       var errorCode = error.code;
       console.log(errorCode);
-      alert(errorCode);
+      // alert(errorCode);
 
       var errorMessage = error.message;
       console.log(errorMessage);
-      alert(errorMessage);
+      // alert(errorMessage);
       });
 
 });

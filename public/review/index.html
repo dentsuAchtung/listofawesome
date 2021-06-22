@@ -29,36 +29,32 @@
 	<link href="../assets/plugins/font-awesome-5/css/all.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="../assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
-
 	<link href="../assets/plugins/codrops-dialogFx/dialog.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="../assets/plugins/codrops-dialogFx/dialog-sandra.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="../assets/plugins/owl-carousel/../assets/owl.carousel.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="../assets/plugins/jquery-nouislider/jquery.nouislider.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="../assets/plugins/jquery-metrojs/MetroJs.css" rel="stylesheet" type="text/css" media="screen" />
-
-	<link type="text/css" rel="stylesheet" href="../assets/plugins/jquery-datatable/media/css/jquery.dataTables.css">
-	<link type="text/css" rel="stylesheet" href="../assets/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css">
-	<link media="screen" type="text/css" rel="stylesheet" href="../assets/plugins/datatables-responsive/css/datatables.responsive.css">
+	<link href="../assets/plugins/datatables/DataTables-1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+	<link href="../assets/plugins/datatables/Responsive-2.2.7/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="../assets/plugins/swiper6.4.15/swiper-bundle.min.css" />
+	<link href="../assets/plugins/jquery-bar-rating/themes/fontawesome-stars.css" rel="stylesheet">
 
 	<link class="main-stylesheet" href="../pages/css/themes/achtung.css" rel="stylesheet" type="text/css" />
 	<link class="main-stylesheet" href="../assets/css/style.css" rel="stylesheet" type="text/css" />
 
 
-    <!-- update the version number as needed -->
-		<script defer="" src="/__/firebase/8.2.9/firebase-app.js"></script>
-		<script defer="" src="/__/firebase/8.2.9/firebase-auth.js"></script>
-		<script defer="" src="/__/firebase/8.2.9/firebase-firestore.js"></script>
-		<!--
-			initialize the SDK after all desired features are loaded, set useEmulator to false
-			to avoid connecting the SDK to running emulators.
-		-->
-		<script defer="" src="/__/firebase/init.js?useEmulator=true"></script>
-    <!--
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer="" src="/__/firebase/init.js?useEmulator=true"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-app.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-auth.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-firestore.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-storage.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-analytics.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-remote-config.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-performance.js"></script>
+	<!--
+		initialize the SDK after all desired features are loaded, set useEmulator to false
+		to avoid connecting the SDK to running emulators.
+	-->
+	<script defer="" src="/__/firebase/init.js?useEmulator=true"></script>
 
 
 </head>
@@ -120,6 +116,12 @@
             <span class="icon-thumbnail "><i class="pg-icon">user_add</i></span>
           </li>
 					<li class="">
+						<a href="../lists">
+							<span class="title">My Lists</span>
+						</a>
+						<span class="icon-thumbnail "><i class="pg-icon">pin</i></span>
+					</li>
+					<li class="">
             <a href="../settings">
               <span class="title">Settings</span>
             </a>
@@ -134,6 +136,7 @@
 	<!-- END SIDEBAR -->
 	<!-- START PAGE-CONTAINER -->
 	<div class="page-container">
+		<div id="sidebar-modal-shade" class="filter-modal-shade"></div>
 		<!-- START PAGE HEADER WRAPPER -->
 		<!-- START HEADER -->
 		<div class="header ">
@@ -155,7 +158,7 @@
 					<button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false" aria-label="profile dropdown">
 						<span class="thumbnail-wrapper d32 circular inline">
-							<img src="../assets/img/profiles/0.png"  width="32" height="32">
+							<img id="account-photo" src="../assets/img/profiles/0.png"  width="32" height="32">
 						</span>
 					</button>
 					<div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
@@ -275,18 +278,18 @@
 								<div class="modal-header clearfix text-left"  style="margin-bottom:30px;">
 								  <button aria-label="" type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-icon">close</i></button>
 									<div class="container" style="padding:0!important">
-										<div class="row no-gutters" >
-											<div class="col-9">
-									      <h3><span id="modal-info-name" class="semi-bold" >John Smith</span></h3>
-												<h6><i class="pg-icon" style="vertical-align: bottom; margin-right:10px;">user</i><span id="modal-info-position">Accountant</span></h6>
-												<h6><i class="pg-icon" style="vertical-align: bottom; margin-right:10px;">map</i><span id="modal-info-location">Accountant</span></h6>
-
-											</div>
-											<div class="col-3">
-												<div class="flex-center-right">
+										<div class="flex-cell">
+											<div>
+												<div class="flex-center-left" style="margin-right:20px;">
 													<div id="modal-info-profileImage" class="avatar" style=""></div>
 												</div>
 											</div>
+											<div>
+									      		<h3><span id="modal-info-name" class="semi-bold" >John Smith</span></h3>
+												<h6><i class="pg-icon" style="vertical-align: bottom; margin-right:10px;">user</i><span id="modal-info-position">Accountant</span></h6>
+												<h6><i class="pg-icon" style="vertical-align: bottom; margin-right:10px;">map</i><span id="modal-info-location">Accountant</span></h6>
+											</div>
+											
 									  </div>
 									</div>
 							  </div>
@@ -318,29 +321,32 @@
 												<p class="bold separator">Work</p>
 												<div class="form-group form-group-default no-focus tag-list">
 													<div class="form-group-prepend-text"> Skills: </div>
-													<div class="tags" id="modal-info-skills">
-														<button class="btn btn-chip">Editor</button>
-														 <button class="btn btn-chip">Motion</button>
-														 <button class="btn btn-chip">Film</button>
-													</div>
+													<div class="tags" id="modal-info-skills"></div>
 												</div>
 												<div class="form-group form-group-default no-focus tag-list">
 													<div class="form-group-prepend-text"> Worked on: </div>
-													<div class="tags" id="modal-info-workedOn">
-														<button class="btn btn-chip">Volkswagen</button>
-														 <button class="btn btn-chip">Stuff</button>
-													</div>
+													<div class="tags" id="modal-info-workedOn"></div>
+												</div>
+												<div class="form-group form-group-default no-focus tag-list">
+													<div class="form-group-prepend-text"> Rating: </div>
+													<select class="formRating" id="modal-info-rating">
+													  <option value="1">1</option>
+													  <option value="2">2</option>
+													  <option value="3">3</option>
+													  <option value="4">4</option>
+													  <option value="5">5</option>
+													</select>
 												</div>
 												<br>
-												<a href="" class="btn btn-block btn-achtung btn-lg btn-icon-right">
+												<a href="" class="btn btn-block btn-achtung btn-lg">
 													<span id="modal-info-website" style="text-align:left" class="icon-link"><i class="fas fa-globe-europe"></i>Website</span>
 													<i class="pg-icon md-18">arrow_right</i>
 												</a>
-													<a href="" class="btn btn-block btn-achtung btn-lg btn-icon-right ">
+													<a href="" class="btn btn-block btn-achtung btn-lg ">
 														<span id="modal-info-linkedin" style="text-align:left" class="icon-link"><i class="fab fa-linkedin"></i>LinkedIn</span>
 														<i class="pg-icon md-18">arrow_right</i>
 													</a>
-													<a href="" class="btn btn-block btn-achtung btn-lg btn-icon-right">
+													<a href="" class="btn btn-block btn-achtung btn-lg ">
 														<span id="modal-info-instagram" style="text-align:left" class="icon-link"><i class="fab fa-instagram"></i>Instagram</span>
 														<i class="pg-icon md-18">arrow_right</i>
 													</a>
@@ -349,6 +355,10 @@
 													<p class="bold separator">Notes</p>
 													<p id="modal-info-notes">Test sjdajdskjfksdsdkj</p>
 												</div>
+
+												<!-- <a href="" style="margin-top:20px" class="btn btn-block btn-achtung btn-lg faded-out">
+													<span id="modal-edit-person" style="text-align:left" class="icon-link"><i class="fas fa-user-edit"></i>Edit this person</span>
+												</a> -->
 									</div>
 		            </div>
 							</div>
@@ -378,24 +388,22 @@
     <script src="../assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
     <script src="../assets/plugins/jquery-actual/jquery.actual.min.js"></script>
     <script src="../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-    <script type="text/javascript" src="../assets/plugins/jquery-datatable/media/js/jquery.dataTables.min.js"></script>
-		<script type="text/javascript" src="../assets/plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
-		<script type="text/javascript" src="../assets/plugins/jquery-datatable/extensions/Bootstrap/jquery-datatable-bootstrap.js"></script>
-		<script src="../assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
-		<script src="../assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="../assets/plugins/datatables/DataTables-1.10.24/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="../assets/plugins/datatables/Responsive-2.2.7/js/dataTables.responsive.min.js"></script>
 
 		<script src="../assets/plugins/jquery-metrojs/MetroJs.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="../assets/plugins/classie/classie.js"></script>
-			<script src="../assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
-			<script src="../assets/plugins/jquery-isotope/isotope.pkgd.min.js" type="text/javascript"></script>
-			<script src="../assets/plugins/codrops-dialogFx/dialogFx.js" type="text/javascript"></script>
-			<script src="../assets/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
-			<script src="../assets/plugins/jquery-nouislider/jquery.nouislider.min.js" type="text/javascript"></script>
-			<script src="../assets/plugins/jquery-nouislider/jquery.liblink.js" type="text/javascript"></script>
-			<script src="../assets/plugins/css-element-queries/ResizeSensor.js"></script>
-			<script src="../assets/plugins/css-element-queries/ElementQueries.js"></script>
+		<script type="text/javascript" src="../assets/plugins/jquery-bar-rating/jquery.barrating.min.js"></script>
+		<script src="../assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+		<script src="../assets/plugins/jquery-isotope/isotope.pkgd.min.js" type="text/javascript"></script>
+		<script src="../assets/plugins/codrops-dialogFx/dialogFx.js" type="text/javascript"></script>
+		<script src="../assets/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+		<script src="../assets/plugins/jquery-nouislider/jquery.nouislider.min.js" type="text/javascript"></script>
+		<script src="../assets/plugins/jquery-nouislider/jquery.liblink.js" type="text/javascript"></script>
+		<script src="../assets/plugins/css-element-queries/ResizeSensor.js"></script>
+		<script src="../assets/plugins/css-element-queries/ElementQueries.js"></script>
 		<script src="../assets/plugins/swiper6.4.15/swiper-bundle.min.js"></script>
-		<script src="assets/plugins/copyclick/copyclick.js"></script>
+		<script src="../assets/plugins/copyclick/copyclick.js"></script>
 
     <!-- BEGIN CORE TEMPLATE JS -->
     <script src="../pages/js/pages.min.js" type="text/javascript"></script>
@@ -405,9 +413,10 @@
 	<!-- LoginETC -->
 	<script>
 
-
 		var swiper;
 		var currentPersonUid;
+		var currnetUser;
+		var isAdmin;
 
 		//////////////////////// INIT TABLE /////////////////////////
 
@@ -419,11 +428,22 @@
 									"sLengthMenu": "_MENU_ ",
 									"sInfo": ""
 							},
-							"scrollX": true,
+							columns: [
+					        { responsivePriority: 1 },
+					        { responsivePriority: 7 },
+					        { responsivePriority: 6 },
+					        { responsivePriority: 8 },
+					        { responsivePriority: 3 },
+									{ responsivePriority: 5 },
+									{ responsivePriority: 4 },
+									{ responsivePriority: 2 }
+					    ],
+							responsive: {
+									details: false
+							},
 					bLengthChange : false,
 					lengthChange: false,
 					"paging": false,
-					"pagingType": "numbers",
 					columnDefs: [
 					 { orderable: false, targets: -1 }
 				 ],
@@ -435,14 +455,15 @@
 
 		var contactsTable = $('#contactsTable').DataTable(settings);
 
-
-
 		// search box for table
 		$('#search-table-full').keyup(function() {
 			contactsTable.search($(this).val()).draw();
 		});
 
-
+		$('.formRating').barrating({
+						theme: 'fontawesome-stars',
+						readonly: true,
+					});
 
 
 		//////////////////////// USER HANDLING /////////////////////////
@@ -450,21 +471,41 @@
 		document.addEventListener('DOMContentLoaded', function() {
 			const db = firebase.firestore();
 
+
 			firebase.auth().onAuthStateChanged((user) => {
 				if(user){
+
+					if(user.photoURL)
+						$('#account-photo').attr("src", user.photoURL);
+
+					if(user.displayName)
+						$('#account-name').html(user.displayName);
+
 					var userdoc = db.collection("users").doc(user.uid).get().then((doc) => {
-					    if (doc.exists) {
-									$('#account-name').html(doc.data().firstName + ' ' + doc.data().lastName);
-					    } else {
-					        console.log("No such document!");
-					    }
+							if (doc.exists) {
+								if (doc.data().isAdmin) {
+									isAdmin = true;
+									console.log("User is an Admin");
+
+								} else {
+									console.log("User is not an Admin");
+									isAdmin = false;
+								}
+
+								addContactsToTable();
+
+							} else {
+									console.log("No such document!");
+									window.location.href = '../error';
+							}
 					}).catch((error) => {
-					    console.log("Error getting document:", error);
+							console.log("Error getting document:", error);
 					});
 
 				} else {
-					window.location.href = '/login';
+					window.location.href = '../login';
 				}
+
 			});
 
 			$('#sign-out').click(function() {
@@ -507,6 +548,8 @@
 
 					contactsTable.draw();
 					$(window).trigger('resize');
+
+					if(!isAdmin){ contactsTable.column( 7 ).visible(false) }
 
 					$(".live-tile").each(function( index ) {
 						if( $( this ).children.length > 1){
@@ -556,7 +599,6 @@
 				});
 
 			}
-			addContactsToTable();
 
 			$('#modalContactView').on('shown.bs.modal', function (e) {
 				setTimeout(function () {	$('#modalContactView').css('overflow-y','auto')	}, 300);
@@ -644,6 +686,13 @@
 									$('#modal-info-profileImage').css('background-image', 'url('+ person.profileImageUrl +')');
 								} else {
 									$('#modal-info-profileImage').hide();
+								}
+
+								if(person.rating){
+									$('#modal-info-rating').barrating('set', person.rating);
+									$('#modal-info-rating').parent().parent().show();
+								} else {
+									$('#modal-info-rating').parent().parent().hide();
 								}
 
 								if(person.website != ''){
@@ -791,10 +840,18 @@
 
 			//////////////////////// HELPERS /////////////////////////
 
-			$('.link-button').on('click', function() {
+			$('#sidebar-modal-shade').on('click', function() {
+				$('[data-toggle="sidebar"]').trigger( "click" );
+				$('#sidebar-modal-shade').removeClass('show');
+			});
 
-
-			})
+			$('.toggle-sidebar').on('click', function() {
+				if($('.page-sidebar').hasClass('visible')){
+				 $('#sidebar-modal-shade').removeClass('show');
+			 } else {
+				 $('#sidebar-modal-shade').addClass('show');
+			 }
+		 });
 
 			function updateReviewMenu(){
 				db.collection("contacts").where("approvedStatus", "==", "pending").get().then(function(querySnapshot) {

@@ -749,7 +749,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
@@ -850,7 +850,7 @@
     SelectFx.prototype._init = function() {
         // check if we are using a placeholder for the native select box
         // we assume the placeholder is disabled and selected by default
-        var selectedOpt = document.querySelector('option[selected]');
+        var selectedOpt = this.el.querySelector('option[selected]');
         this.hasDefaultPlaceholder = selectedOpt && selectedOpt.disabled;
 
         // get selected option (either the first option with attr selected or just the first option)
@@ -1410,7 +1410,7 @@
                 close = $('<button type="button" class="close" data-dismiss="alert"></button>')
                     .append('<span aria-hidden="true">&times;</span>')
                     .append('<span class="sr-only">Close</span>');
-                
+
             }
 
             if($('body').hasClass("horizontal-app-menu")){
@@ -1474,7 +1474,7 @@
         function alignWrapperToContainer(){
             var containerPosition = $(".header").get(0);
             var containerHeight = $(containerPosition).height();
-  
+
             if(/top/.test(self.options.position)){
               self.wrapper.css('top', containerHeight)
             }
@@ -2015,7 +2015,7 @@
             var $this = $(this);
             var data = $this.data('pg.parallax');
             var options = $.extend(true, {}, typeof option == 'object' ? option : {}, $this.data());
-            
+
             if (!data) $this.data('pg.parallax', (data = new Parallax(this, options)));
             if (typeof option == 'string') data[option]();
         })
@@ -2298,12 +2298,11 @@
          return false;
      })
      $(document).on('click.pg.sidebar.data-api', '[data-toggle="sidebar"]', function(e) {
-        console.log("menu open");
         var $this = $(this);
         var $target = $('[data-pages="sidebar"]');
         $target.data('pg.sidebar').toggleSidebar();
         return false
-    })
+	   })
 
  })(window.jQuery);
 
@@ -2480,8 +2479,8 @@
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
 	(factory());
-}(this, (function () { 
-	
+}(this, (function () {
+
 'use strict';
 /**
  * https://github.com/WICG/focus-ring
