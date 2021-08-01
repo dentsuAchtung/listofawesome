@@ -71,7 +71,7 @@
       <!-- END SIDEBAR MENU TOP TRAY CONTENT-->
       <!-- BEGIN SIDEBAR MENU HEADER-->
       <div class="sidebar-header">
-				<img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo.png" height="45">
+				<img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo.png" height="50">
 			</div>
       <!-- END SIDEBAR MENU HEADER-->
       <!-- START SIDEBAR MENU -->
@@ -142,7 +142,7 @@
 			<!-- END MOBILE SIDEBAR TOGGLE -->
 			<div class="">
 				<div class="brand inline  m-l-10 ">
-					<img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo.png" height="45">
+					<img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo.png" height="50">
 				</div>
 
 			</div>
@@ -663,7 +663,7 @@
 				//POPULATE SKILLS FILTER
 				var skillGroups = '';
 
-				db.collection("skills").get().then((querySnapshot) => {
+				db.collection("skills").orderBy("title", "desc").get().then((querySnapshot) => {
 						querySnapshot.forEach((doc) => {
 								var options = '';
 								doc.data().options.forEach((option) => {

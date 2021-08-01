@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset="utf-8" />
+	<title>List of Awesome</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="apple-touch-icon" href="../assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+	<link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+	<link rel="manifest" href="../assets/img/favicon/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta content="" name="description" />
+	<meta content="Luke Vink" name="author" />
+
+	<link class="main-stylesheet" href="../assets/css/style.css" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/font-awesome-5/css/all.css" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/select2/css/select2.min.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/codrops-dialogFx/dialog.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/codrops-dialogFx/dialog-sandra.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/owl-carousel/assets/owl.carousel.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/ion-slider/css/ion.rangeSlider.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/ion-slider/css/ion.rangeSlider.skinFlat.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/jquery-metrojs/MetroJs.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/datatables/DataTables-1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/datatables/Responsive-2.2.7/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/plugins/swiper6.4.15/swiper-bundle.min.css" rel="stylesheet">
+	<link href="assets/plugins/jquery-bar-rating/themes/fontawesome-stars.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+	<link class="main-stylesheet" href="pages/css/themes/achtung.css" rel="stylesheet" type="text/css">
+	<link class="main-stylesheet" href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+	<script defer="" src="/__/firebase/8.3.1/firebase-app.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-auth.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-firestore.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-storage.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-analytics.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-remote-config.js"></script>
+	<script defer="" src="/__/firebase/8.3.1/firebase-performance.js"></script>
+	<!--
+		initialize the SDK after all desired features are loaded, set useEmulator to false
+		to avoid connecting the SDK to running emulators.
+	-->
+	<script defer="" src="/__/firebase/init.js?useEmulator=true"></script>
+
+</head>
+
+<body class="fixed-header menu-pin menu-behind " style="display:none">
+	<!-- BEGIN SIDEBAR -->
+	    <!-- BEGIN SIDEBPANEL-->
+    <nav class="page-sidebar" data-pages="sidebar">
+      <!-- BEGIN SIDEBAR MENU TOP TRAY CONTENT-->
+      <div class="sidebar-overlay-slide from-top" id="appMenu">
+      </div>
+      <!-- END SIDEBAR MENU TOP TRAY CONTENT-->
+      <!-- BEGIN SIDEBAR MENU HEADER-->
+      <div class="sidebar-header">
+				<!-- <img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo.png" height="50"> -->
+			</div>
+      <!-- END SIDEBAR MENU HEADER-->
+      <!-- START SIDEBAR MENU -->
+      <div class="sidebar-menu">
+        <!-- BEGIN SIDEBAR MENU ITEMS-->
+        <ul class="menu-items">
+	        <li class="m-t-30 active" >
+            <a href="javascript:;">
+              <span class="title">All People</span>
+              <span class=" arrow"></span>
+            </a>
+            <span class="icon-thumbnail"><i class="pg-icon">users</i></span>
+            <ul class="sub-menu">
+              <li id="menu-list" class="active switchToList">
+                <a href="#">List</a>
+                <span class="icon-thumbnail"><i class="pg-icon">list_bullets</i></span>
+              </li>
+              <li id="menu-grid" class="switchToGrid">
+                <a href="#">Grid</a>
+                <span class="icon-thumbnail"><i class="pg-icon">grid</i></span>
+              </li>
+          	</ul>
+          </li>
+		  		<li class="">
+            <a href="/review">
+              <span class="title">Needs Review</span>
+            </a>
+            <span class="icon-thumbnail "><i id="menu-review-icon" class="pg-icon">star</i></span>
+          </li>
+          <li class="">
+            <a href="/add">
+              <span class="title">Add Person</span>
+            </a>
+            <span class="icon-thumbnail "><i class="pg-icon">user_add</i></span>
+          </li>
+					<li class="">
+						<a href="/lists">
+							<span class="title">My Lists</span>
+						</a>
+						<span class="icon-thumbnail "><i class="pg-icon">pin</i></span>
+					</li>
+					<li class="">
+            <a href="/settings">
+              <span class="title">Settings</span>
+            </a>
+            <span class="icon-thumbnail "><i class="pg-icon">cog</i></span>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <!-- END SIDEBAR MENU -->
+    </nav>
+    <!-- END SIDEBAR -->
+	<!-- END SIDEBAR -->
+	<!-- START PAGE-CONTAINER -->
+
+
+	<div class="page-container">
+		<div id="filter-modal-shade" class="filter-modal-shade"></div>
+		<div id="sidebar-modal-shade" class="filter-modal-shade"></div>
+
+		<!-- START PAGE HEADER WRAPPER -->
+		<!-- START HEADER -->
+		<div class="header ">
+			<!-- START MOBILE SIDEBAR TOGGLE -->
+				<a href="#" class="btn-link toggle-sidebar d-lg-none pg-icon btn-icon-link" data-toggle="sidebar">
+				menu</a>
+			<!-- END MOBILE SIDEBAR TOGGLE -->
+			<div class="">
+				<div class="brand inline  m-l-10 ">
+					<img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo.png" height="50">
+				</div>
+
+			</div>
+			<div class="d-flex align-items-center">
+
+				<!-- START User Info-->
+				<div class="dropdown pull-right d-lg-block">
+					<button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false" aria-label="profile dropdown">
+						<span class="thumbnail-wrapper d32 circular inline">
+							<img id="account-photo" src="assets/img/profiles/0.png"  width="32" height="32">
+						</span>
+					</button>
+					<div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
+						<a href="#" class="dropdown-item"><span>Signed in as <br /><b><span id="account-name">Achtung!<span></b></span></a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item">Settings</a>
+						<a id="sign-out" class="dropdown-item">Sign Out</a>
+					</div>
+				</div>
+				<!-- END User Info-->
+<!--
+				<a href="#" class="header-icon m-l-5 sm-no-margin d-inline-block" data-toggle="quickview"
+					data-toggle-element="#quickview">
+					<i class="pg-icon btn-icon-link">menu_add</i>
+				</a>
+-->
+			</div>
+		</div>
+		<!-- END HEADER -->
+		<!-- END PAGE HEADER WRAPPER -->
+		<!-- START PAGE CONTENT WRAPPER -->
+		<div class="page-content-wrapper">
+
+			<!-- START PAGE CONTENT -->
+			<div class="content">
+
+				<!-- START CONTAINER FLUID -->
+				<div class="container-fluid container-fixed-lg">
+					<!-- BEGIN PlACE PAGE CONTENT HERE -->
+
+					<div class="row d-flex" style="margin-top:24px;">
+						<div class="col-md-2 m-none" style="overflow:;">
+							<h4> All People </h4>
+						</div>
+						<div class="col-md-10 m-centered stretch-col-mobile" style="text-align:right">
+
+							<div class="btn-group btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-default btn-huge switchToList active">
+										<input type="radio" name="options" id="option1" checked="">
+										<span class="icon-thumbnail no-margin"><i class="pg-icon">list_bullets</i></span>
+									</label>
+									<label class="btn btn-default btn-huge switchToGrid" style="text-align:center;" >
+										<input type="radio" name="options" id="option2">
+										<span class="icon-thumbnail no-margin"><i class="pg-icon">grid</i></span>
+									</label>
+							</div>
+
+							<a href="/add" id="add-row"  class="btn btn-primary btn-huge stretch-btn-mobile"><span class="icon-thumbnail "><i class="pg-icon">user_add</i></span>Add someone awesome</a>
+
+						</div>
+					</div>
+
+ 					<div class="search-wrapper">
+						<input type="text" id="search-table-full" class="form-control pull-right" placeholder="Search">
+						<button aria-label="Filter Contacts" id="filter-button" class="btn btn-default btn-lg btn-rounded m-r-10 m-b-10"><i class="pg-icon" style="vertical-align: bottom; width: 30px !important; height: 30px !important; margin-right:0px;">filter</i></button>
+					</div>
+
+
+								<div id="filter-modal" class="filter-modal">
+												<h4 style="margin-bottom: 20px; border-bottom: 1px solid #eeeeee">Filters</h4>
+													<div class="form-check form-check-inline switch switch-lg complete">
+														<input type="checkbox" id="switch1">
+														<label for="switch1">Has <b>worked with us</b></label>
+													</div>
+													<div class="form-check form-check-inline switch switch-lg complete">
+														<input type="checkbox" id="switch2">
+														<label for="switch2">Is located in <b>Amsterdam</b></label>
+													</div>
+												<div class="form-group form-group-focusless" style="margin-top:15px;">
+													<label>Filter by Rate p/hr</label>
+													<div class="irs-wrapper primary">
+															<input type="text" id="filterRateSlider" name="filterRateSlider" value="0;2057" />
+													</div>
+												</div>
+
+											<div class="form-group form-group-default form-group-default-select2" >
+													<label>Filter by skills</label>
+													<select class="required full-width" id="skills-filter" name="skillsFilter" multiple>
+
+													</select>
+											</div>
+											<div class="form-group form-group-default form-group-default-select2" >
+													<label>Filter by clients</label>
+													<select class=" full-width" id="prior-work-filter" placeholder="Type to search..." multiple>
+														<optgroup id="client-options" label="Clients">
+														</optgroup>
+													</select>
+											</div>
+
+								</div>
+
+
+
+					<div id="contactTableWrapper" class="hideMe display responsive nowrap">
+						<table id="contactsTable"  class="table table-hover" cellspacing="0" width="100%">
+						    <thead>
+						        <tr>
+									<th>uid</th>
+						            <th class="no-sort"></th>
+						            <th>Name</th>
+						            <th>Position</th>
+						            <th>Location</th>
+						            <th>Email</th>
+						            <th>Skills</th>
+									<th>Worked On</th>
+									<th>Rate</th>
+									<th>Rating</th>
+									<th class="no-sort">links</th>
+						            <th class="no-sort"></th>
+						        </tr>
+						    </thead>
+						    <tbody>
+								</tbody>
+					</table>
+				</div>
+
+				<div id="contactsGridWrapper" class="hideMe">
+					<div id="contactsGrid">
+
+
+					</div>
+				</div>
+
+
+					<!-- END PLACE PAGE CONTENT HERE -->
+				</div>
+				<!-- END CONTAINER FLUID -->
+			</div>
+			<!-- END PAGE CONTENT -->
+
+		</div>
+		<!-- END PAGE CONTENT WRAPPER -->
+	</div>
+	<!-- END PAGE CONTAINER -->
+
+
+	<!-- ADD TO LIST MODAL -->
+	<div class="modal fade slide-up disable-scroll" id="modalAddtoList" tabindex="-1" role="dialog" aria-labelledby="modalSlideUpLabel" aria-hidden="false">
+			<div class="modal-dialog ">
+					<div class="modal-content-wrapper">
+					<div class="modal-content">
+							<div class="modal-header clearfix text-left">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+										<i class="pg-close fs-14"></i>
+									</button>
+									<h3 id="addtolist-title">Add person to a list</h3>
+									<p>Choose a list to add them to, or create a new one.<p>
+							</div>
+							<div class="modal-body">
+									<form id="addtolist-form">
+										<div class="wide-select-wrapper">
+										</div>
+
+										<div id="list-name-group" class="m-t-10 sm-m-t-10 form-group form-group-default" style="display:none;">
+												<input id="new-list-name" type="text" placeholder="Enter a name for your list" class="form-control input-lg">
+                    </div>
+
+										<div class="row m-t-30 sm-m-t-20">
+                      <div class="col-md-6">
+												<button aria-label="" id="addtolist-cancel" type="button" class="btn btn-default btn-block m-t-5">Cancel</button>
+                      </div>
+											<div class="col-md-6">
+												<button aria-label="" id="addtolist-add" type="button" class="btn btn-primary btn-block m-t-5">Add to list</button>
+											</div>
+                    </div>
+
+									</form>
+							</div>
+					</div>
+					</div>
+					<!-- /.modal-content -->
+			</div>
+	</div>
+	<!-- END ADD TO LIST MODAL -->
+
+
+		<!-- DELETE PERSON MODAL -->
+		<div class="modal fade slide-up disable-scroll" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="modalSlideUpLabel" aria-hidden="false">
+			<div class="modal-dialog ">
+					<div class="modal-content-wrapper">
+					<div class="modal-content">
+							<div class="modal-header clearfix text-left">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+										<i class="pg-close fs-14"></i>
+									</button>
+									<h3 id="delete-title"><i class="pg-icon">bin_alt</i> Delete this person?</h3>
+									<p>Make sure! If you want them back, they will need to be added again.<p>
+							</div>
+							<div class="modal-body">
+
+										<div class="row m-t-30 sm-m-t-20">
+                     						 <div class="col-md-6">
+												<button aria-label="" id="delete-cancel" type="button" class="btn btn-default btn-block m-t-5">Cancel</button>
+                      						</div>
+											<div class="col-md-6">
+												<button aria-label="" id="delete-delete" data-person="" type="button" class="btn btn-primary btn-block m-t-5">Delete</button>
+											</div>
+                    </div>
+
+							</div>
+					</div>
+					</div>
+					<!-- /.modal-content -->
+			</div>
+	</div>
+	<!-- END DELETE PERSON MODAL -->
+
+	<!-- CONTACT MODAL -->
+	<div class="modal fade slide-up" id="modalContactView" tabindex="-1" role="dialog" aria-labelledby="modalSlideUpLabel" aria-hidden="false">
+	    <div class="modal-dialog modal-lg">
+	        <div class="modal-content-wrapper ">
+	        <div class="modal-content" id="modalContent">
+						<div class="row" style="width:100%; margin:0;">
+							<div class="col-md-6 no-padding" id="workColumn">
+								<div id="workSwiper" class="swiper-container">
+									 <div class="swiper-wrapper"></div>
+									 <div class="swiper-pagination"></div>
+								</div>
+							</div>
+							<div class="col-md-6" id="infoColumn">
+								<div class="modal-header clearfix text-left"  style="margin-bottom:30px;">
+								  <button aria-label="" type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-icon">close</i></button>
+									<div class="container" style="padding:0!important">
+										<div class="flex-cell">
+											<div>
+												<div class="flex-center-left" style="margin-right:20px;">
+													<div id="modal-info-profileImage" class="avatar" style=""></div>
+												</div>
+											</div>
+											<div>
+									      		<h3><span id="modal-info-name" class="semi-bold" >John Smith</span></h3>
+												<h6><i class="pg-icon" style="vertical-align: bottom; margin-right:10px;">user</i><span id="modal-info-position">Accountant</span></h6>
+												<h6><i class="pg-icon" style="vertical-align: bottom; margin-right:10px;">map</i><span id="modal-info-location">Accountant</span></h6>
+											</div>
+											
+									  </div>
+									</div>
+							  </div>
+		            <div class="modal-body">
+
+									<div class="container" style="padding:0!important">
+
+											<div class="form-group input-group copy-input">
+															<div class="input-group-prepend">
+	                        		<span class="input-group-text transparent left-icon"><i class="fas fa-envelope" style="margin-left:2px"></i>	</span>
+														</div>
+											       <input id="modal-info-email" type="text" value="email@gmail.com" class="form-control">
+											       <div class="input-group-append">
+											          <span class="input-group-text copy-icon"><i class="pg-icon">copy</i></span>
+											       </div>
+											</div>
+											<div class="form-group input-group copy-input">
+												   <div class="input-group-prepend">
+	                        						  <span class="input-group-text transparent left-icon"> <i class="fas fa-phone-alt" style="margin-left:3px"></i> 	</span>
+												   </div>
+											       <input id="modal-info-phone" type="text" value="+3161234567" class="form-control">
+											       <div class="input-group-append">
+											          <span class="input-group-text copy-icon"> <i class="pg-icon">copy</i></span>
+											       </div>
+											</div>
+												<p class="bold separator">Work</p>
+												<div class="form-group form-group-default no-focus tag-list">
+													<div class="form-group-prepend-text"> Skills: </div>
+													<div class="tags" id="modal-info-skills"></div>
+												</div>
+												<div class="form-group form-group-default no-focus tag-list">
+													<div class="form-group-prepend-text"> Worked on: </div>
+													<div class="tags" id="modal-info-workedOn"></div>
+												</div>
+												<div class="form-group form-group-default no-focus tag-list">
+													<div class="form-group-prepend-text"> Rating: </div>
+													<select class="formRating" id="modal-info-rating">
+													  <option value="1">1</option>
+													  <option value="2">2</option>
+													  <option value="3">3</option>
+													  <option value="4">4</option>
+													  <option value="5">5</option>
+													</select>
+												</div>
+												<div class="form-group form-group-default no-focus tag-list">
+													<div class="form-group-prepend-text"> Rate: </div>
+													<div id="modal-info-rate" class="form-text-right"> €200<small>p/h</small></div>
+												</div>
+												<br>
+												<br>
+
+												<a href="" class="btn btn-block btn-achtung btn-lg">
+													<span id="modal-info-website" style="text-align:left" class="icon-link"><i class="fas fa-globe-europe"></i>Website</span>
+													<i class="pg-icon md-18">arrow_right</i>
+												</a>
+												<a href="" class="btn btn-block btn-achtung btn-lg ">
+													<span id="modal-info-linkedin" style="text-align:left" class="icon-link"><i class="fab fa-linkedin"></i>LinkedIn</span>
+													<i class="pg-icon md-18">arrow_right</i>
+												</a>
+												<a href="" class="btn btn-block btn-achtung btn-lg ">
+													<span id="modal-info-instagram" style="text-align:left" class="icon-link"><i class="fab fa-instagram"></i>Instagram</span>
+													<i class="pg-icon md-18">arrow_right</i>
+												</a>
+												<div id="modal-info-notes-wrapper">
+													<p class="bold separator">Notes</p>
+													<p id="modal-info-notes">Test sjdajdskjfksdsdkj</p>
+												</div>
+
+												<!-- <a href="" style="margin-top:20px" class="btn btn-block btn-achtung btn-lg faded-out">
+													<span id="modal-edit-person" style="text-align:left" class="icon-link"><i class="fas fa-user-edit"></i>Edit this person</span>
+												</a> -->
+									</div>
+		            </div>
+							</div>
+						</div>
+
+
+
+	        </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- /.CONTACT MODAL -->
+
+
+
+
+	<!-- BEGIN VENDOR JS -->
+	    <!-- BEGIN VENDOR JS -->
+		<scrip data-pace-options='{ "ajax": false }' type="text/javascript" src="assets/plugins/pace/pace.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/modernizr.custom.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/popper/umd/popper.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-easy.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery-unveil/jquery.unveil.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+		<script type="text/javascript" src="assets/plugins/datatables/DataTables-1.10.24/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/datatables/Responsive-2.2.7/js/dataTables.responsive.min.js"></script>
+
+		<script type="text/javascript" src="assets/plugins/select2/js/select2.full.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery-bar-rating/jquery.barrating.min.js"></script>
+
+		<script type="text/javascript" src="assets/plugins/jquery-metrojs/MetroJs.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
+		<script type="text/javascript" src="assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery-isotope/isotope.pkgd.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/codrops-dialogFx/dialogFx.js"></script>
+		<script type="text/javascript" src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/ion-slider/js/ion.rangeSlider.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/css-element-queries/ResizeSensor.js"></script>
+		<script type="text/javascript" src="assets/plugins/css-element-queries/ElementQueries.js"></script>
+		<script type="text/javascript" src="assets/plugins/swiper6.4.15/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/copyclick/copyclick.js"></script>
+
+    <!-- BEGIN CORE TEMPLATE JS -->
+    <script src="pages/js/pages.js"></script>
+    <!-- END CORE TEMPLATE JS -->
+
+
+	<!-- LoginETC -->
+	<script>
+
+
+		var swiper;
+		var currentPersonUid;
+		var rateMax;
+		var rateMin;
+		var currentUser;
+		var currentList = '';
+		var addPersonUid;
+		var isAdmin;
+
+		//////////////////////// INIT TABLE /////////////////////////
+
+		var settings = {
+					"sDom": "<t><'row'<p i>>",
+					"destroy": true,
+					"oLanguage": {
+							"sLengthMenu": "_MENU_ ",
+							"sInfo": "Showing <b>_START_ to _END_</b> of _TOTAL_ entries"
+					},
+					columns: [
+							{ responsivePriority: 11 },
+							{ responsivePriority: 1 },
+							{ responsivePriority: 2 },
+							{ responsivePriority: 8 },
+							{ responsivePriority: 7 },
+							{ responsivePriority: 9 },
+							{ responsivePriority: 4 },
+							{ responsivePriority: 11 },
+							{ responsivePriority: 6 },
+							{ responsivePriority: 10 },
+							{ responsivePriority: 5 },
+							{ responsivePriority: 3 }
+			   		],
+					// "scrollCollapse": true,
+					// "scrollX": true,
+					bLengthChange : false,
+					lengthChange: false,
+					responsive: {
+        				details: false
+    				},
+					pagingType: "numbers",
+					pageLength: 12,
+					columnDefs: [
+						{
+								targets:  [ 0, 3, 4, 7, 8 ],
+								visible: false,
+								searchable: true
+						},
+					 	{ 		
+							 	orderable: false,
+								targets: [0, 1, 11]
+						}
+					],
+					'createdRow': function(row, data, dataIndex){
+						$('td:eq(0)', row).css('max-width', '70px');
+					 	$('td:eq(4)', row).css('min-width', '100px');
+			      		$('td:eq(5)', row).css('min-width', '125px');
+						$('td:eq(6)', row).css('max-width', '50px');
+			   		}
+		};
+
+		var contactsTable = $('#contactsTable').DataTable(settings);
+
+		//////////////////////// TABLE SEARCHING AND FILTERING /////////////////////////
+
+		$.fn.dataTable.ext.search.push(
+		function( settings, data, dataIndex ) {
+						// var min = parseInt( $('#min').val(), 10 );
+						var min = rateMin;
+						var max = rateMax;
+						var rateNum = data[8].substring(1).slice(0, -2);;
+						var rate = parseFloat( rateNum ) || 0; // use data for the age column
+
+						if ( ( isNaN( min ) && isNaN( max ) ) ||
+								 ( isNaN( min ) && rate <= max ) ||
+								 ( min <= rate   && isNaN( max ) ) ||
+								 ( min <= rate   && rate <= max ) )
+						{
+								return true;
+						}
+						return false;
+				}
+		);
+
+		$('#search-table-full').keyup(function() {
+			contactsTable.search($(this).val()).draw();
+		});
+
+		$("#filterRateSlider").ionRangeSlider({
+						min: 0,
+						max: 300,
+						type: 'double',
+						prefix: "€",
+						maxPostfix: "+",
+						prettify: true,
+						hasGrid: true,
+						step: 5,
+						onChange: function (data) {
+								rateMin = data.from;
+								rateMax = data.to;
+								contactsTable.draw();
+						}
+		});
+
+		var skillsFilterText = '';
+		var clientsFilterText = '';
+		$('#skills-filter').on('change.select2', function (e) {
+				var data = $(this).select2('data');
+				contactsTable.columns( 6 ).search('').draw();
+				skillsFilterText = '';
+				$.each( data, function( key, value ) {
+					if(value.text!=undefined)
+						skillsFilterText = skillsFilterText + value.text + ' ';
+				});
+				if(skillsFilterText != ' '){
+					contactsTable.columns( 6 ).search(skillsFilterText).draw();
+				}
+		});
+
+		$('#prior-work-filter').on('change.select2', function (e) {
+				var data = $(this).select2('data');
+				contactsTable.columns( 7 ).search('').draw();
+				clientsFilterText = '';
+				$.each( data, function( key, value ) {
+					clientsFilterText = clientsFilterText + value.text + ' ';
+				});
+				if(clientsFilterText != ' '){
+					contactsTable.columns( 7 ).search(clientsFilterText).draw();
+				}
+		});
+
+		$('#switch1').change(function() {
+				if(this.checked) {
+					contactsTable.columns( 6 ).search( '^(?!\s*$).+', true, false ).draw();
+				} else {
+					contactsTable.columns( 6 ).search( '', true, false ).draw();
+				}
+		});
+		$('#switch2').change(function() {
+				if(this.checked) {
+					contactsTable.columns( 3 ).search( 'Amsterdam', true, false ).draw();
+				} else {
+					contactsTable.columns( 3 ).search( '', true, false ).draw();
+				}
+		});
+
+
+		contactsTable.on( 'draw', function () {
+
+				$('.grid-contact').hide();
+
+				var visibleRows = contactsTable.rows( { search: 'applied',  page: 'current'  } ).data();
+
+				visibleRows
+				$.each( visibleRows, function( key, value ) {
+					$(".grid-contact[data-uid='" + value[0] + "']").show();
+				});
+
+		} );
+
+
+		//////////////////////// USER HANDLING /////////////////////////
+
+		document.addEventListener('DOMContentLoaded', function() {
+			const db = firebase.firestore();
+
+			firebase.auth().onAuthStateChanged((user) => {
+				if(user){
+
+					currentUser = user;
+
+					if(user.photoURL)
+						$('#account-photo').attr("src", user.photoURL);
+
+					if(user.displayName)
+						$('#account-name').html(user.displayName);
+
+					var userdoc = db.collection("users").doc(user.uid).get().then((doc) => {
+							if (doc.exists) {
+								if (doc.data().isAdmin) {
+									isAdmin = true;
+									console.log("User is an Admin");
+								} else {
+									console.log("User is not an Admin");
+									isAdmin = false;
+								}
+								initPage();
+							} else {
+									console.log("No such document!");
+									window.location.href = '../error';
+							}
+					}).catch((error) => {
+							console.log("Error getting document:", error);
+					});
+
+				} else {
+					window.location.href = '../login';
+				}
+
+			});
+
+			$('#sign-out').click(function() { firebase.auth().signOut() });
+
+
+
+
+			function initPage(){
+				$('body').show();
+				initContacts();
+				updateReviewMenu();
+				initFilters();
+				initLists();
+			}
+
+			//////////////////////// UPDATE FILTERS /////////////////////////
+
+
+			function initFilters(){
+				//POPULATE SKILLS FILTER
+				var skillGroups = '';
+				db.collection("skills").orderBy("title", "desc").get().then((querySnapshot) => {
+						querySnapshot.forEach((doc) => {
+								var options = '';
+								doc.data().options.forEach((option) => {
+									options = options + '<option value="' + option + '">'+ option +'</option>';
+								});
+								skillGroups = skillGroups + '<optgroup label="'+doc.data().title+'">' + options + '</optgroup>';
+						});
+						$("#skills-filter").append(skillGroups);
+				}).then(() => {
+					$("#skills-filter").select2();
+				});
+
+				//POPULATE CLIENTS FILTER
+				db.collection("clients").get().then((querySnapshot) => {
+						querySnapshot.forEach((doc) => {
+								$("<option>").val(doc.data().name).text(doc.data().name).appendTo("#client-options");
+						});
+				}).then(() => {
+					$("#prior-work-filter").select2();
+				});
+			}
+
+			function initLists(){
+
+				var userdoc = db.collection("users").doc(currentUser.uid).collection('lists').get().then(function(list) {
+					$('#modalAddtoList .cs-wrapper').remove();
+					$('#addtolist-form .wide-select-wrapper').prepend('<select id="list-select" class="cs-select cs-skin-slide"></select>');
+
+					list.forEach(function(doc) {
+						if(!currentList){
+							currentList = doc.id;
+						}
+						if(doc.id == currentList){
+							$('#list-select').append('<option value="'+doc.id+'" selected>'+doc.data().title+'</option>');
+						} else {
+							$('#list-select').append('<option value="'+doc.id+'">'+doc.data().title+'</option>');
+						}
+					});
+					$('#list-select').append('<option value="createNew">⊕ Create new..</option>');
+
+					setTimeout(function(){
+
+					var el = $('#list-select').get(0);
+					$(el).wrap('<div class="cs-wrapper"></div>');
+					new SelectFx(el);
+
+						$('#list-select').val(currentList);
+						currentList = $('#list-select').val();
+						checkInList(addPersonUid, currentList);
+
+						$('#list-select').change(function() {
+							currentList = $(this).val();
+							if($(this).val() == 'createNew'){
+								$('#list-name-group').fadeIn(200);
+								$('#list-name-group input').focus();
+								$('#addtolist-add').prop('disabled', false).html('Create list and add');
+							} else {
+								checkInList(addPersonUid, currentList);
+								$('#list-name-group').fadeOut(200);
+							}
+						});
+					}, 30);
+
+
+				}).catch((error) => {
+						console.log("Error getting user:", error);
+				});
+			}
+
+			//////////////////////// CONTACTS TABLE /////////////////////////
+
+
+			function initContacts() {
+
+				db.collection("contacts").where("approvedStatus", "==", "approved").get().then(function(querySnapshot) {
+					querySnapshot.forEach(function(doc) {
+						var person = doc.data();
+						//ADD TO TABLE
+ 						contactsTable.row.add([
+							doc.id,
+							makeAvatar(doc),
+							makeNameAndJob(doc),
+							makePosition(person),
+							person.location,
+							'<span class="copy-click" data-tooltip-text="Click To Copy" data-tooltip-text-copied="✔ Copied">'+ person.email + '</span>' ,
+							makeTags(person.skills),
+							makeTags(person.workedOn),
+							makeRate(person.rate),
+							makeRating(doc),
+							makeLinks(person),
+							makeButtons(doc)
+						]);
+
+						setTimeout(function(){
+							 $(".person-uid[data-uid='" + doc.id + "']").parent().parent().attr('data-uid', doc.id );
+							 $('.personRating').barrating({
+								 theme: 'fontawesome-stars',
+								 readonly: true,
+							 });
+						}, 30);
+
+						if(person.profileImageUrl == ''){
+							person.profileImageUrl = 'assets/img/profiles/0.png'
+						}
+
+						//ADD TO GRID
+						$("#contactsGrid").append('<div class="grid-contact" data-uid="'+ doc.id +'" data-toggle="modal" data-target="#modalContactView">' +
+													'<div class="grid-contact-profile" style="background-image:url('+(person.profileImageUrl || '/img/profiles/0.png')+')"></div>'+
+													'<div class="grid-contact-work">'+
+													makeTiles(person) +
+													'<button aria-label="" data-firstname="' + person.firstName + '" data-uid="'+ doc.id +'" type="button" data-toggle="modal" data-target="#modalAddtoList" class="add-button btn btn-achtung btn-animated from-top"> <span> <i class="pg-icon">add</i> </span> <span class="hidden-block"> <i class="pg-icon">add</i> </span> </button>' +
+													'</div>'+
+													'<div class="grid-contact-info">'+
+															'<h4 style="margin-bottom:2px;">' + person.firstName + ' ' + person.lastName + '</h4>' +
+															'<p class="no-margin">' + makePosition(person) + ', ' + person.location + '</p>' +
+															// '<p class="no-margin">' + (person.location || '</br>') + '</p>' +
+															'<div class="grid-contact-tags">'+ makeTags(person.skills) +'</div>' +
+															'<div class="grid-contact-buttons">'+makeLinks(person, true) +'</div>' +
+													'</div>'+
+													'</div>');
+	
+
+					});
+					contactsTable.draw();
+					$(window).trigger('resize');
+
+					addEventsToTable();
+
+					$('.paginate_button').on('click', function() {
+					
+						changePage();
+
+					});
+
+					$('#contactTableWrapper').removeClass('hideMe');
+					initCopyClick();
+
+				});
+
+			}
+
+			function changePage(){
+						$(".person-uid").each(function( index ) {
+							let uid = $(this).attr('data-uid');
+							$(this).parent().parent().attr('data-uid', uid );
+							console.log(uid);
+						});
+
+						$('.personRating').barrating({
+								 theme: 'fontawesome-stars',
+								 readonly: true,
+						});
+						$('.paginate_button').on('click', function() {
+							changePage();
+						});
+
+						$('#contactsTable tr').on('click', function() {
+							var uid = $(this).attr('data-uid');
+							if(uid){ putPersonInModal(uid) }
+						});
+						console.log('test');
+			}
+
+			function addEventsToTable(){
+
+
+				
+
+
+				$(".live-tile").each(function( index ) {
+						if( $( this ).children.length > 1){
+							$( this ).liveTile({
+							    animationComplete: function(tileData){
+							        $(this).liveTile("goto",getRandomOptions());
+							    }
+							}).liveTile("goto", getRandomOptions());
+
+						}
+					});
+
+					$('.formRating').barrating({
+						theme: 'fontawesome-stars',
+						readonly: true,
+					});
+
+					function getRandomOptions(){
+					    var rndBoolean = Math.floor(Math.random() * 1001) % 2 == 0;
+							var delay = Math.floor(Math.random() * 3000) + 2000;
+					    return {
+					            index: "next",
+					            delay: delay,
+					            animationDirection: rndBoolean ? 'forward' : 'backward',
+					            direction: rndBoolean ? 'vertical' : 'horizontal'
+					        };
+					}
+
+
+					$('#contactsTable tr').on('click', function() {
+						var uid = $(this).attr('data-uid');
+						if(uid){ putPersonInModal(uid) }
+					});
+
+					$('.grid-contact').on('click', function() {
+						var uid = $(this).attr('data-uid');
+						console.log(uid);
+						if(uid){ putPersonInModal(uid) }
+					});
+
+
+					$('#contactsTable tr .btn-chip').on('click', function(e) {
+						e.stopPropagation();
+						var text = $(this).text();
+						var searchText = $('#search-table-full').val();
+						console.log(searchText);
+						$('#search-table-full').val( searchText + ' ' + text);
+						contactsTable.search(searchText + ' ' + text).draw();
+					});
+
+					$('#filter-button').on('click', function() {
+						if($(this).hasClass('show')){
+							$('#filter-modal').removeClass('show');
+							$('#filter-modal-shade').removeClass('show');
+							$(this).removeClass('show');
+						} else {
+							$('#filter-modal').addClass('show');
+							$('#filter-modal-shade').addClass('show');
+							$(this).addClass('show');
+						}
+					});
+
+					$('#filter-modal-shade').on('click', function() {
+						$('#filter-modal').removeClass('show');
+						$('#filter-modal-shade').removeClass('show');
+						$('#filter-button').removeClass('show');
+					});
+
+
+					$(".add-button").click(function(event){
+						event.stopPropagation();
+						$('#modalAddtoList').modal('show');
+						addPersonUid = $(this).data('uid');
+						$("#addtolist-title").html('Add '+ $(this).data('firstname') +' to a list');
+						$("#addtolist-add").data('person', addPersonUid);
+					});
+
+					$('#addtolist-cancel').click(function() {
+						$('#modalAddtoList').modal('hide');
+					});
+
+					$('#addtolist-add').click(function() {
+						var personToAdd = $(this).data('person');
+						if(currentList!== 'createNew'){
+							db.collection("users").doc(currentUser.uid).collection('lists').doc(currentList).update({
+									people: firebase.firestore.FieldValue.arrayUnion(personToAdd)
+							}).then((docRef) => {
+								$('#addtolist-add').addClass('btn-success').removeClass('btn-primary').html('Added!');
+								setTimeout(function(){
+									$('#modalAddtoList').modal('hide');
+									$('#addtolist-add').removeClass('btn-success').addClass('btn-primary').html('Add to list');
+								}, 700);
+							});
+						} else {
+							db.collection("users").doc(currentUser.uid).collection('lists').add({
+								title: $('#new-list-name').val(),
+								people: [personToAdd]
+							}).then((docRef) => {
+								currentList = docRef.id;
+								$('#list-name-group').fadeOut(200);
+								console.log('new list created:' + currentList);
+								console.log('person added to list: ' + personToAdd);
+								$('#addtolist-add').addClass('btn-success').removeClass('btn-primary').html('Added!');
+								setTimeout(function(){
+									$('#modalAddtoList').modal('hide');
+									$('#addtolist-add').removeClass('btn-success').addClass('btn-primary').html('Add to list');
+								}, 700);
+							});
+						}
+					});
+
+					$(".delete-button").click(function(event){
+						event.stopPropagation();
+						$('#modalDelete').modal('show');
+						deletePersonUid = $(this).data('uid');
+						console.log(deletePersonUid)
+						$("#delete-title").html('Delete '+ $(this).data('firstname')+'?');
+						$("#delete-delete").data('person', deletePersonUid);
+					});
+
+					$('#delete-cancel').click(function() {
+						$('#modalDelete').modal('hide');
+					});
+
+					$('#delete-delete').click(function() {
+						var personToDelete = $(this).data('person');
+							db.collection("contaxcts").doc(personToDelete).delete().then((docRef) => {
+								console.log(docRef.id, 'Successfully Deleted');
+								$('#delete-delete').addClass('btn-danger').removeClass('btn-primary').html('Deleted!');
+								setTimeout(function(){
+									$('#modalDelete').modal('hide');
+									$('#delete-delete').removeClass('btn-danger').addClass('btn-primary').html('Delete');
+								}, 500);
+							});
+						
+					});
+
+
+					
+
+					$(".edit-button").click(function(event){ event.stopPropagation() });
+					$("td a").click(function(event){ event.stopPropagation() });
+
+			}
+
+			function checkInList(person, list){
+				db.collection("users").doc(currentUser.uid).collection('lists').doc(currentList).get().then((doc) => {
+						var personAdded = false;
+						doc.data().people.forEach(function(contactUid) {
+							if (person == contactUid){
+								personAdded = true;
+							}
+						});
+
+						if(!personAdded){
+							$('#addtolist-add').prop('disabled', false).html('Add to list');
+							return false;
+						} else {
+							$('#addtolist-add').prop('disabled', true).html('Already added!');
+							return true;
+						}
+				});
+			}
+
+			function updateReviewMenu(){
+				db.collection("contacts").where("approvedStatus", "==", "pending").get().then(function(querySnapshot) {
+					var count = 0;
+					querySnapshot.forEach(function(doc) {
+						count ++
+					});
+					if(count > 0){$("#menu-review-icon").html(count).addClass('highlight')}
+				});
+			}
+
+			$('.switchToGrid').click(function() {
+					$('#contactTableWrapper').addClass('hideMe');
+					$('.switchToList').removeClass('active');
+					$('.switchToGrid').addClass('active');
+					$('#contactsGridWrapper').addClass('hideMe');
+					setTimeout(function () {
+						$('#contactTableWrapper').hide();
+						$('#contactsGridWrapper').show();
+						setTimeout(function () {
+							$('#contactsGridWrapper').removeClass('hideMe');
+						}, 10);
+					}, 301);
+			});
+
+			$('.switchToList').click(function() {
+				$('#contactsGridWrapper').addClass('hideMe');
+				$('.switchToList').addClass('active');
+				$('.switchToGrid').removeClass('active');
+					setTimeout(function () {
+						$('#contactsGridWrapper').hide();
+						$('#contactTableWrapper').show();
+						setTimeout(function () {
+							$('#contactTableWrapper').removeClass('hideMe');
+						}, 5);
+					}, 301);
+			});
+
+
+			$('#modalContactView').on('shown.bs.modal', function (e) {
+				setTimeout(function () {	$('#modalContactView').css('overflow-y','auto')	}, 300);
+			})
+			$('#modalContactView').on('hidden.bs.modal', function (e) {
+				setTimeout(function () { $('#modalContactView').css('overflow-y','hidden') }, 300);
+			})
+
+			function initWorkSwiper(){
+				swiper = new Swiper('#workSwiper', {
+					slidesPerView: 1,
+					centeredSlides: true,
+					spaceBetween: 1,
+					grabCursor: true,
+					speed: 500,
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					},
+					autoplay: {
+					   delay: 3000,
+					}
+				});
+
+				var element = document.getElementById('modalContent');
+				new ResizeSensor(element, function() {
+				    swiper.update();
+				});
+			}
+
+			function putPersonInModal(uid){
+
+				var userdoc = db.collection("contacts").doc(uid).get().then((doc) => {
+						if (doc.exists) {
+								var person = doc.data();
+
+								$('#modal-info-name').html(person.firstName + ' ' + person.lastName);
+								$('#modal-info-email').val(person.email);
+								if(person.phone != ''){
+									$('#modal-info-phone').parent().show();
+									$('#modal-info-phone').val(person.phone);
+								} else {
+									$('#modal-info-phone').parent().hide();
+								}
+								if(person.status != 'Freelancer'){
+									$('#modal-info-position').html(person.jobTitle + ', ' + person.company? person.company : '');
+								} else {
+									if(person.rate !=''){
+										$('#modal-info-position').html('Freelancer,' + person.rate? person.rate : '' + '<small>/h</small>');
+									} else {
+										$('#modal-info-position').html('Freelancer');
+									}
+								}
+								if(person.location != ''){
+									$('#modal-info-location').parent().show();
+									$('#modal-info-location').html(person.location);
+								} else {
+									$('#modal-info-location').parent().hide();
+								}
+
+								if(person.profileImageUrl != ''){
+									$('#modal-info-profileImage').show();
+									$('#modal-info-profileImage').css('background-image', 'url('+ person.profileImageUrl +')');
+								} else {
+									$('#modal-info-profileImage').hide();
+								}
+
+								if(person.rating){
+									$('#modal-info-rating').barrating('set', person.rating);
+									$('#modal-info-rating').parent().parent().show();
+								} else {
+									$('#modal-info-rating').parent().parent().hide();
+								}
+
+								if(person.rate){
+									$('#modal-info-rate').html('<b>€' + person.rate + '</b> <small>p/h</small>');
+									$('#modal-info-rate').parent().show();
+								} else {
+									$('#modal-info-rate').parent().hide();
+								}
+
+								if(person.website != ''){
+									$('#modal-info-website').parent().show();
+									$('#modal-info-website').attr("href", person.website);
+								} else {
+									$('#modal-info-website').parent().hide();
+								}
+
+								if(person.linkedin != ''){
+									$('#modal-info-linkedin').parent().show();
+									$('#modal-info-linkedin').attr("href", person.linkedin);
+								} else {
+									$('#modal-info-linkedin').parent().hide();
+								}
+
+								if(person.instagram != ''){
+									$('#modal-info-instagram').parent().show();
+									$('#modal-info-instagram').attr("href", person.instagram);
+								} else {
+									$('#modal-info-instagram').parent().hide();
+								}
+
+								console.log(person.notes);
+								if(person.notes != ''){
+									$('#modal-info-notes-wrapper').show();
+									$('#modal-info-notes').html(person.notes);
+								} else {
+									$('#modal-info-notes-wrapper').hide();
+								}
+
+								if(person.skills != []){
+									$('#modal-info-skills').empty();
+									person.skills.forEach(function(skill) {
+											$('#modal-info-skills').append( '<button class="btn btn-chip">'+ skill +'</button>');
+									});
+								}
+								if(person.workedOn.length > 0){
+									$('#modal-info-workedOn').parent().show();
+
+									$('#modal-info-workedOn').empty();
+									person.workedOn.forEach(function(client) {
+											$('#modal-info-workedOn').append( '<button class="btn btn-chip">'+ client +'</button>');
+									});
+								} else {
+									$('#modal-info-workedOn').parent().hide();
+								}
+
+								if(person.featuredWork){
+									if(person.featuredWork.length > 0){
+										$('#workColumn').show();
+										$('#infoColumn').removeClass('col-12').addClass('col-md-6');
+										$('#workSwiper').remove();
+										$('#workColumn').prepend('	<div id="workSwiper" class="swiper-container"> <div class="swiper-wrapper"></div> <div class="swiper-pagination"></div> 	</div>');
+
+										person.featuredWork.forEach(function(imageUrl) {
+											$('#workSwiper .swiper-wrapper').append( '<div class="swiper-slide"><div class="imageWrap" style="background-image: url('+imageUrl+')"></div></div>');
+										});
+
+										initWorkSwiper();
+
+									} else {
+										$('#workColumn').hide();
+										$('#infoColumn').removeClass('col-md-6').addClass('col-12');
+									}
+								} else {
+									$('#workColumn').hide();
+									$('#infoColumn').removeClass('col-md-6').addClass('col-12');
+								}
+
+								$('#modalContactView').modal();
+
+						} else {
+								console.log("No such document!");
+						}
+				}).catch((error) => {
+						console.log("Error getting document:", error);
+				});
+
+			}
+
+			//////////////////////// TABLE HELPERS /////////////////////////
+
+			function makeTiles(person){
+				if(person.featuredWork){
+					if (person.featuredWork.length > 0){
+						var tileshtml = '<div data-mode="carousel" data-start-now="true" class="live-tile">';
+						var i = 1;
+						person.featuredWork.forEach(function(item) {
+						    tileshtml = tileshtml + '<div><img class="full" src="'+ item +'" alt="'+ i +'" /></div>'
+								i++;
+						});
+						tileshtml = tileshtml + '</div>'
+					} else {
+						return '';
+					}
+				} else {
+					return '';
+				}
+
+				return tileshtml;
+			}
+
+			function makeAvatarName(doc){
+				if(doc.data().profileImageUrl){
+					return '<span style="display:none" class="person-uid" data-uid="'+ doc.id+ '">'+ doc.id+ '</span>' + '<div class="flex-cell"><span class="thumbnail-wrapper d32 circular inline"><img src="'+ doc.data().profileImageUrl +'" alt="" data-src="'+ doc.data().profileImageUrl +'" data-src-retina="'+ doc.data().profileImageUrl +'" width="32" height="32"></span><span class="name">'+ doc.data().firstName + ' ' + doc.data().lastName +'</span></div>'
+				} else 	{
+					return '<span style="display:none" class="person-uid" data-uid="'+ doc.id+ '">'+ doc.id+ '</span>' + '<div class="flex-cell"><span class="thumbnail-wrapper d32 circular inline"></span><span class="name">'+ doc.data().firstName + ' ' + doc.data().lastName +'</span></div>'
+				}
+			}
+
+			function makeNameAndJob(doc){
+				var html = '<div class="flex-cell-vert"><span class="name">'+ doc.data().firstName + ' ' + doc.data().lastName +'</span></div>';
+				
+				if(doc.data().location){
+					html = '<div class="flex-cell-vert"><span class="name">'+ doc.data().firstName + ' ' + doc.data().lastName +'</span><span class="title">'+ doc.data().location +'</span></div>' 
+				} 
+
+				if(doc.data().jobTitle && doc.data().location){
+					html = '<div class="flex-cell-vert"><span class="name">'+ doc.data().firstName + ' ' + doc.data().lastName +'</span><span class="title">'+ doc.data().jobTitle + ', ' + doc.data().location +'</span></div>' 
+				} 
+
+				return html
+			}
+
+			function makeAvatar(doc){
+				if(doc.data().profileImageUrl){
+					return '<span style="display:none" class="person-uid" data-uid="'+ doc.id+ '">'+ doc.id+ '</span>' + '<div class="flex-cell"><span class="thumbnail-wrapper d32 circular inline no-margin"><img src="'+ doc.data().profileImageUrl +'" alt="" data-src="'+ doc.data().profileImageUrl +'" data-src-retina="'+ doc.data().profileImageUrl +'" width="32" height="32"></span></div>'
+				} else 	{
+					return '<span style="display:none" class="person-uid" data-uid="'+ doc.id+ '">'+ doc.id+ '</span>' + '<div class="flex-cell"><span class="thumbnail-wrapper d32 circular inline no-margin"></span></div>'
+				}
+			}
+
+			function makeLinks(person, addEmail){
+				var linkshtml = '';
+
+				if(addEmail)
+					linkshtml = linkshtml + '<a target="_blank" href="mailto:'+ person.email +'" class="btn btn-achtung btn-lg"><span> <i class="fas fa-envelope"></i> </span></a>'
+
+				if(person.website != '' && person.website != undefined)
+					linkshtml = linkshtml + '<a target="_blank" href="'+ person.website +'"  class="btn btn-achtung btn-lg"><span> <i class="fas fa-globe-europe"></i> </span></a>'
+
+				if(person.linkedin != '' && person.linkedin != undefined)
+					linkshtml = linkshtml + '<a target="_blank" href="'+ person.linkedin +'" class="btn btn-achtung btn-lg"><span> <i class="fab fa-linkedin"></i> </span></a>'
+
+				if(person.instagram != '' && person.instagram != undefined)
+					linkshtml = linkshtml + '<a target="_blank" href="'+ person.instagram +'" class="btn btn-achtung btn-lg"><span> <i class="fab fa-instagram"></i> </span></a>'
+
+
+				return linkshtml
+			}
+			function makePosition(person){
+				if(person.status != 'Freelancer'){
+					return 	person.jobTitle + ', ' + person.company;
+				} else {
+					return 	'Freelancer';
+				}
+			}
+			function makeTags(tagArray){
+				var html = '';
+				tagArray.forEach(function(item) {
+				    html = html + ' <button class="btn btn-chip">'+ item +'</button>';
+				});
+				return html
+			}
+
+			function makeRate(rate){
+				var html = '';
+				if(rate != '')
+				    html = '€'+ rate +'<small style="opacity:0.6">/h</small>';
+				return html
+			}
+
+			function makeRating(doc){
+				var html ='';
+
+				if(doc.data().rating){
+					html = '<select class="personRating" data-uid="'+ doc.id + '">';
+					var i;
+					for (i = 1; i < 6; i++) {
+						if(doc.data().rating == i){
+							html += '<option selected value="'+i+'">'+i+'</option>';
+						} else {
+							html += '<option value="'+i+'">'+i+'</option>';
+						}
+					}
+					html += '</select>';
+				}
+
+				return html
+			}
+
+			function makeButtons(doc){
+
+				var html = '<button  aria-label="" data-firstName="'+ doc.data().firstName +'" data-uid="'+ doc.id + '" type="button" data-toggle="modal" data-target="#modalAddtoList" class="add-button btn btn-achtung btn-lg btn-animated from-top"> <span> <i class="pg-icon">add</i> </span> <span class="hidden-block"> <i class="pg-icon">add</i> </span> </button>';
+			
+
+				// var html = '<a href="/edit?id='+doc.id+'"  aria-label="" data-uid="'+ doc.id + '" type="button" class="edit-button btn btn-achtung btn-lg btn-animated from-top"> <span> <i class="pg-icon">edit</i> </span> <span class="hidden-block"> <i class="pg-icon">edit</i> </span> </a>' +
+				// 		   '<button  aria-label="" data-firstName="'+ doc.data().firstName +'" data-uid="'+ doc.id + '" type="button" data-toggle="modal" data-target="#modalAddtoList" class="add-button btn btn-achtung btn-lg btn-animated from-top"> <span> <i class="pg-icon">add</i> </span> <span class="hidden-block"> <i class="pg-icon">add</i> </span> </button>';
+				
+				// //  var html = '<button  aria-label="" data-firstName="'+ doc.data().firstName +'" data-uid="'+ doc.id + '" type="button" data-toggle="modal" data-target="#modalAddtoList" class="add-button btn btn-achtung btn-lg btn-animated from-top"> <span> <i class="pg-icon">add</i> </span> <span class="hidden-block"> <i class="pg-icon">add</i> </span> </button>';
+				if (isAdmin){
+				    html = '<div class="dropup" data-uid="'+ doc.id + '">' +
+								'<button class="btn btn-achtung btn-lg btn-animated from-bottom"><span> <i class="pg-icon">more</i> </span> <span class="hidden-block"> <i class="pg-icon">chevron_up</i> </span></button>' +
+								'<div class="dropup-content">' +
+									'<a href="#" data-firstName="'+ doc.data().firstName +'" data-uid="'+ doc.id + '" class="delete-button">Delete <i class="pg-icon">trash_alt</i></a>' +
+									'<a href="/edit?id='+doc.id+'" class="edit-button">Edit <i class="pg-icon">edit</i></a>' +
+									'<a href="#" data-firstName="'+ doc.data().firstName +'" data-uid="'+ doc.id + '" class="add-button" data-toggle="modal" data-target="#modalAddtoList" >Add to List <i class="pg-icon">add</i></a>' +
+								'</div>' +
+						   '</div>';
+				}		   
+
+
+				
+				return html
+			}
+
+
+
+
+			//////////////////////// HELPERS /////////////////////////
+
+			$('#sidebar-modal-shade').on('click', function() {
+				$('[data-toggle="sidebar"]').trigger( "click" );
+				$('#sidebar-modal-shade').removeClass('show');
+			});
+
+			$('.toggle-sidebar').on('click', function() {
+				if($('.page-sidebar').hasClass('visible')){
+				 $('#sidebar-modal-shade').removeClass('show');
+			 } else {
+				 $('#sidebar-modal-shade').addClass('show');
+			 }
+		 });
+
+
+			$('.copy-input').on('click', function() {
+				  // finds data-clipboard-test for content p class "click"
+				   copyText = $(this).find( "input" );
+					 /* Select the text field */
+					 copyText.select();
+					 /* Copy the text inside the text field */
+					 document.execCommand("copy");
+
+					 $('body').pgNotification({
+						 	style: 'bar',
+							message: 'Copied to clipboard!',
+							timeout: 1500,
+							type: 'success',
+							position: 'top'
+					 }).show();
+
+				})
+
+			// USE JSON TO POPULATE A COLLECTION
+			// function json2firestore(jsonFile, colletionName) {
+			// 	$.getJSON(jsonFile, function(json) {
+			// 			$.each(json, function() {
+			// 					var clientName = JSON.stringify(this).replace(/\\"/g,"\uFFFF");
+			// 					var clientNameNoQuotes = clientName.replace(/['"]+/g, '');
+			// 					console.log(clientNameNoQuotes);
+			// 					db.collection(colletionName).add({
+			// 					    name: clientNameNoQuotes,
+			// 					}).then((docRef) => {
+			// 					    console.log("Document written with ID: ", docRef.id);
+			// 					})
+			// 					.catch((error) => {
+			// 					    console.error("Error adding document: ", error);
+			// 					});
+			// 			});
+			//
+			// 	});
+			// };
+		 // json2firestore('clients.json',"clients");
+
+		});// END ON DOM LOADED
+
+
+	</script>
+	<!-- END PAGE LEVEL JS -->
+</body>
+
+</html>
